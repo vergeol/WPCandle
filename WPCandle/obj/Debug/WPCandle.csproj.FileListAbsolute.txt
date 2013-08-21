@@ -1,0 +1,15 @@
+C:\Users\g\Documents\GitHub\WPCandle\WPCandle\Bin\Debug\ApplicationIcon.png
+C:\Users\g\Documents\GitHub\WPCandle\WPCandle\Bin\Debug\Background.png
+C:\Users\g\Documents\GitHub\WPCandle\WPCandle\Bin\Debug\WPCandle.dll
+C:\Users\g\Documents\GitHub\WPCandle\WPCandle\Bin\Debug\WPCandle.pdb
+C:\Users\g\Documents\GitHub\WPCandle\WPCandle\Bin\Debug\AppManifest.xaml
+C:\Users\g\Documents\GitHub\WPCandle\WPCandle\Bin\Debug\WPCandle.xap
+C:\Users\g\Documents\GitHub\WPCandle\WPCandle\Bin\Debug\Guilbored.PhoneLibrary.dll
+C:\Users\g\Documents\GitHub\WPCandle\WPCandle\Bin\Debug\Guilbored.PhoneLibrary.pdb
+C:\Users\g\Documents\GitHub\WPCandle\WPCandle\obj\Debug\WPCandle.csprojResolveAssemblyReference.cache
+C:\Users\g\Documents\GitHub\WPCandle\WPCandle\obj\Debug\App.g.cs
+C:\Users\g\Documents\GitHub\WPCandle\WPCandle\obj\Debug\MainPage.g.cs
+C:\Users\g\Documents\GitHub\WPCandle\WPCandle\obj\Debug\WPCandle.g.resources
+C:\Users\g\Documents\GitHub\WPCandle\WPCandle\obj\Debug\WPCandle.dll
+C:\Users\g\Documents\GitHub\WPCandle\WPCandle\obj\Debug\WPCandle.pdb
+C:\Users\g\Documents\GitHub\WPCandle\WPCandle\obj\Debug\XapCacheFile.xml
