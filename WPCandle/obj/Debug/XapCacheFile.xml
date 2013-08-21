@@ -1,0 +1,12 @@
+﻿<xapCache source="C:\Users\g\Documents\GitHub\WPCandle\WPCandle\Bin\Debug\WPCandle_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="2013-08-22 00:48:02">
+  <file source="C:\Users\g\Documents\GitHub\WPCandle\WPCandle\obj\Debug\WPCandle.dll" archivePath="WPCandle.dll" lastWriteTime="2013-08-22 00:48:01" />
+  <file source="C:\Users\g\Documents\GitHub\WPCandle\WPCandle\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="2013-08-22 00:44:01" />
+  <file source="C:\Users\g\Documents\GitHub\WPCandle\WPCandle\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="2013-08-22 00:44:01" />
+  <file source="C:\Users\g\Documents\GitHub\WPCandle\WPCandle\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="2013-08-22 00:44:01" />
+  <file source="C:\Users\g\Documents\GitHub\WPCandle\WPCandle\Assets\Tiles\IconicTileMediumLarge.png" archivePath="Assets\Tiles\IconicTileMediumLarge.png" lastWriteTime="2013-08-22 00:44:01" />
+  <file source="C:\Users\g\Documents\GitHub\WPCandle\WPCandle\Assets\Tiles\IconicTileSmall.png" archivePath="Assets\Tiles\IconicTileSmall.png" lastWriteTime="2013-08-22 00:44:01" />
+  <file source="C:\Users\g\Documents\GitHub\WPCandle\WPCandle\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="2013-08-22 00:44:11" />
+  <file source="C:\Users\g\Documents\GitHub\WPCandle\WPCandle\Bin\Debug\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="2013-08-22 00:44:01" />
+  <file source="C:\Users\g\Documents\GitHub\WPCandle\WPCandle\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="2013-08-22 00:44:01" />
+  <file source="C:\Users\g\Documents\GitHub\WPCandle\WPCandle\Bin\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="2013-08-22 00:44:12" />
+</xapCache>
