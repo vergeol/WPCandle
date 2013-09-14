@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
+using Microsoft.Phone.Shell;
 
 namespace WPCandle
 {
@@ -27,7 +28,7 @@ namespace WPCandle
 
         void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
-           
+            PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
         }
 
 
