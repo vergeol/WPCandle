@@ -14,3 +14,4 @@ C:\Users\g\Documents\GitHub\WPCandle\WPCandle\obj\Debug\WPCandle.dll
 C:\Users\g\Documents\GitHub\WPCandle\WPCandle\obj\Debug\WPCandle.pdb
 C:\Users\g\Documents\GitHub\WPCandle\WPCandle\obj\Debug\XapCacheFile.xml
 C:\Users\g\Documents\GitHub\WPCandle\WPCandle\Bin\Debug\Assets\Inspiration\candle_flame_by_sketchesatmidnight-d3433s3.jpg
+C:\Users\g\Documents\GitHub\WPCandle\WPCandle\obj\Debug\IndividualCandleControl.g.cs
