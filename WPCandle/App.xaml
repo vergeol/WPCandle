@@ -9,7 +9,7 @@
     <Application.Resources>
     	<ResourceDictionary>
     		<ResourceDictionary.MergedDictionaries>
-    			<ResourceDictionary Source="ThemeResourceDictionary.xaml"/>
+    			<ResourceDictionary Source="RedCandleResourceDictionary.xaml"/>
     		</ResourceDictionary.MergedDictionaries>
     	</ResourceDictionary>
     </Application.Resources>

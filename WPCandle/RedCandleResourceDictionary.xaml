@@ -24,25 +24,26 @@
 		<GradientStop Color="#00120D0A" Offset="0.991"/>
 	</RadialGradientBrush>
 	<RadialGradientBrush x:Key="CandleHaloBrush" Center="0.504,0" GradientOrigin="0.504,0" RadiusX="1.665" RadiusY="1.005">
-		<GradientStop Color="#B2FEE8A4" Offset="0.237"/>
+		<GradientStop Color="#CCE85A86" Offset="0.237"/>
 		<GradientStop Color="#642A1A0D" Offset="0.996"/>
-		<GradientStop Color="#FFFFFED7"/>
-		<GradientStop Color="#99FFC26F" Offset="0.371"/>
-		<GradientStop Color="#7EB77737" Offset="0.474"/>
-		<GradientStop Color="#64552F1C" Offset="0.642"/>
+		<GradientStop Color="#E5F0A8BF" Offset="0.004"/>
+		<GradientStop Color="#B2BA345F" Offset="0.371"/>
+		<GradientStop Color="#99A02C51" Offset="0.474"/>
+		<GradientStop Color="#7E8B264F" Offset="0.628"/>
 		<GradientStop Color="#002F2015" Offset="1"/>
 	</RadialGradientBrush>
-	<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" x:Key="BodyBrush">
+	<LinearGradientBrush x:Key="BodyBrush" EndPoint="0.5,1" StartPoint="0.5,0">
 		<LinearGradientBrush.RelativeTransform>
 			<CompositeTransform CenterY="0.5" CenterX="0.5" Rotation="90"/>
 		</LinearGradientBrush.RelativeTransform>
-		<GradientStop Color="{StaticResource CandleHighlightColor}" Offset="0.47"/>
-		<GradientStop Color="{StaticResource CandleSideColor}" Offset="0.996"/>
-		<GradientStop Color="{StaticResource CandleSideColor}"/>
+		<GradientStop Color="#FFA21F55" Offset="0.498"/>
+		<GradientStop Color="#FF6C012D" Offset="0.996"/>
+		<GradientStop Color="#FF6C012D"/>
 	</LinearGradientBrush>
 	<RadialGradientBrush x:Key="CandleWickZoneBrush">
-		<GradientStop Color="#FFFDF4C5" Offset="1"/>
-		<GradientStop Color="White"/>
+		<GradientStop Color="#FFCB3668" Offset="1"/>
+		<GradientStop Color="#FFFFB7CF" Offset="0.77"/>
+		<GradientStop Color="#FFEC89AA" Offset="0.891"/>
 	</RadialGradientBrush>
 	<!-- Resource dictionary entries should be defined here. -->
 </ResourceDictionary>

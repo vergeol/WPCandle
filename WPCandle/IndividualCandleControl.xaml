@@ -77,7 +77,7 @@
 			</DoubleAnimationUsingKeyFrames>
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="BottomShadow">
 				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0.4"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0.095"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="0"/>
 			</DoubleAnimationUsingKeyFrames>
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="BottomShadow">
@@ -120,44 +120,17 @@
     						<CompositeTransform ScaleX="2" ScaleY="2"/>
     					</Ellipse.RenderTransform>
     				</Ellipse>
-    				<Ellipse x:Name="Bottom" Height="70" StrokeThickness="0" VerticalAlignment="Bottom" Margin="0,0,0,-35">
+    				<Ellipse x:Name="Bottom" Height="70" StrokeThickness="0" VerticalAlignment="Bottom" Margin="0,0,0,-35" Fill="{StaticResource BodyBrush}">
     					<Ellipse.Projection>
     						<PlaneProjection RotationX="50"/>
     					</Ellipse.Projection>
-    					<Ellipse.Fill>
-    						<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-    							<LinearGradientBrush.RelativeTransform>
-    								<CompositeTransform CenterY="0.5" CenterX="0.5" Rotation="90"/>
-    							</LinearGradientBrush.RelativeTransform>
-    							<GradientStop Color="{StaticResource CandleHighlightColor}" Offset="0.47"/>
-    							<GradientStop Color="{StaticResource CandleSideColor}" Offset="0.996"/>
-    							<GradientStop Color="{StaticResource CandleSideColor}"/>
-    						</LinearGradientBrush>
-    					</Ellipse.Fill>
     				</Ellipse>
-    				<Rectangle x:Name="Body" StrokeThickness="0">
-    					<Rectangle.Fill>
-    						<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-    							<LinearGradientBrush.RelativeTransform>
-    								<CompositeTransform CenterY="0.5" CenterX="0.5" Rotation="90"/>
-    							</LinearGradientBrush.RelativeTransform>
-    							<GradientStop Color="{StaticResource CandleHighlightColor}" Offset="0.466"/>
-    							<GradientStop Color="{StaticResource CandleSideColor}" Offset="0.996"/>
-    							<GradientStop Color="{StaticResource CandleSideColor}"/>
-    						</LinearGradientBrush>
-    					</Rectangle.Fill>
-    				</Rectangle>
+    				<Rectangle x:Name="Body" StrokeThickness="0" Fill="{StaticResource BodyBrush}"/>
     				<Rectangle x:Name="BodyGlow" StrokeThickness="0" Margin="0,0,0,-20" Fill="{StaticResource CandleHaloBrush}"/>
-    				<Ellipse x:Name="Top" HorizontalAlignment="Center" Height="70" StrokeThickness="0" VerticalAlignment="Top" Width="200" Margin="0,-35,0,0">
+    				<Ellipse x:Name="Top" HorizontalAlignment="Center" Height="70" StrokeThickness="0" VerticalAlignment="Top" Width="200" Margin="0,-35,0,0" Fill="{StaticResource CandleWickZoneBrush}">
     					<Ellipse.Projection>
     						<PlaneProjection RotationX="50"/>
     					</Ellipse.Projection>
-    					<Ellipse.Fill>
-    						<RadialGradientBrush>
-    							<GradientStop Color="#FFFDF4C5" Offset="1"/>
-    							<GradientStop Color="White"/>
-    						</RadialGradientBrush>
-    					</Ellipse.Fill>
     				</Ellipse>
     				<Grid x:Name="Meche" Margin="0,-54,0,0" VerticalAlignment="Top" HorizontalAlignment="Center">
     					<Path Data="M237.375,394.25 C237.375,394.25 225.5,365.625 229.5,341.625 C229.625,341.5 233.375,339.25 233.375,339.25 C233.375,339.25 227.75,358.25 241.375,394.25 C239.625,394.375 237.375,394.25 237.375,394.25 z" HorizontalAlignment="Left" Height="55.056" Margin="0,0,-0.698,-0.056" Stretch="Fill" StrokeThickness="0" UseLayoutRounding="False" VerticalAlignment="Top" Width="12.698" RenderTransformOrigin="0.5,0.5">
