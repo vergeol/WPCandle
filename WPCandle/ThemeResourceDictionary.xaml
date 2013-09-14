@@ -14,5 +14,7 @@
 		<GradientStop Color="#FFC8C5B8" Offset="0"/>
 		<GradientStop Color="#FFF6EFD1" Offset="1"/>
 	</RadialGradientBrush>
+	<Color x:Key="CandleSideColor">#FFB2A77D</Color>
+	<Color x:Key="CandleHighlightColor">#FFFFF8D6</Color>
 	<!-- Resource dictionary entries should be defined here. -->
 </ResourceDictionary>

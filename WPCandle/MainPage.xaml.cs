@@ -15,10 +15,44 @@ namespace WPCandle
 {
     public partial class MainPage : PhoneApplicationPage
     {
+        public Random r = new Random();
+        public Storyboard FlickerSb;
+        public Storyboard BurnageSb;
+
         // Constructor
         public MainPage()
         {
             InitializeComponent();
+            Loaded+=MainPage_Loaded;
+        }
+
+        void MainPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            FlickerSb = (Storyboard) Resources["SlowFlickerStoryboard"];
+            if (FlickerSb != null)
+            {
+                FlickerSb.Completed += sb_Completed;
+                FlickerSb.Begin();
+            }
+            BurnageSb = (Storyboard)Resources["BurningStoryboard"];
+            if (BurnageSb != null)
+            {
+                BurnageSb.Completed += BurnageSb_Completed;
+                BurnageSb.SpeedRatio = 0.01;
+                BurnageSb.FillBehavior = FillBehavior.Stop;
+                BurnageSb.Begin();
+            }
+        }
+
+        void BurnageSb_Completed(object sender, EventArgs e)
+        {
+            BurnageSb.Begin();
+        }
+
+        void sb_Completed(object sender, EventArgs e)
+        {
+            FlickerSb.SpeedRatio = (float)r.NextDouble();
+            FlickerSb.Begin();
         }
     }
 }
