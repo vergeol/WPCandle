@@ -18,12 +18,23 @@ namespace WPCandle
         public Random r = new Random();
         public Storyboard FlickerSb;
         public Storyboard BurnageSb;
+        public bool IsRotated = false;
 
         // Constructor
         public MainPage()
         {
             InitializeComponent();
             Loaded+=MainPage_Loaded;
+            ContentPanel.Tap += ContentPanel_Tap;
+        }
+
+        void ContentPanel_Tap(object sender, GestureEventArgs e)
+        {
+            if (IsRotated)
+                VisualStateManager.GoToState(this,"RotateLeftVisualState", true);
+            else
+                VisualStateManager.GoToState(this, "RotateRightVisualState", true);
+            IsRotated = !IsRotated;
         }
 
         void MainPage_Loaded(object sender, RoutedEventArgs e)
@@ -51,7 +62,7 @@ namespace WPCandle
 
         void sb_Completed(object sender, EventArgs e)
         {
-            FlickerSb.SpeedRatio = (float)r.NextDouble();
+            FlickerSb.SpeedRatio = 2.0 * (float)r.NextDouble();
             FlickerSb.Begin();
         }
     }

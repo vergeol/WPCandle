@@ -10,7 +10,7 @@
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
-    SupportedOrientations="PortraitOrLandscape" Orientation="Landscape"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
     shell:SystemTray.IsVisible="True">
 	<phone:PhoneApplicationPage.Resources>
 		<Storyboard x:Name="SlowFlickerStoryboard" SpeedRatio="0.20" AutoReverse="False">
@@ -105,6 +105,28 @@
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
+    	<VisualStateManager.VisualStateGroups>
+    		<VisualStateGroup x:Name="RotationVisualStateGroup">
+    			<VisualStateGroup.Transitions>
+    				<VisualTransition GeneratedDuration="0:0:0.8">
+    					<VisualTransition.GeneratedEasingFunction>
+    						<CubicEase EasingMode="EaseOut"/>
+    					</VisualTransition.GeneratedEasingFunction>
+    				</VisualTransition>
+    			</VisualStateGroup.Transitions>
+    			<VisualState x:Name="RotateLeftVisualState">
+    				<Storyboard>
+    					<DoubleAnimation Duration="0" To="45" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="Flame" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="-15" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="Flame" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="48" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Halo" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="-12" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="Halo" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="10" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="HaloGeneral" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="39" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="HaloGeneral" d:IsOptimized="True"/>
+    				</Storyboard>
+    			</VisualState>
+    			<VisualState x:Name="RotateRightVisualState"/>
+    		</VisualStateGroup>
+    	</VisualStateManager.VisualStateGroups>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -132,33 +154,15 @@
         </Grid>
         <Viewbox Grid.RowSpan="2">
         	<Grid x:Name="ContentPanel" Margin="0" Width="480" Height="768">
-        		<Ellipse x:Name="HaloGeneral" HorizontalAlignment="Center" Height="813" StrokeThickness="0" VerticalAlignment="Bottom" Width="813" Margin="-167,-156,-166,111" Opacity="0.4" RenderTransformOrigin="0.5,0.5">
+        		<Ellipse x:Name="HaloGeneral" HorizontalAlignment="Center" Height="813" StrokeThickness="0" VerticalAlignment="Bottom" Width="813" Margin="-167,-156,-166,111" Opacity="0.4" RenderTransformOrigin="0.5,0.5" Fill="{StaticResource HaloGradientBrush}">
         			<Ellipse.RenderTransform>
         				<CompositeTransform/>
         			</Ellipse.RenderTransform>
-        			<Ellipse.Fill>
-        				<RadialGradientBrush>
-        					<GradientStop Color="#5059291D" Offset="0.853"/>
-        					<GradientStop Color="#FFFDECBA"/>
-        					<GradientStop Color="#66DFA769" Offset="0.461"/>
-        					<GradientStop Color="#628E522E" Offset="0.672"/>
-        					<GradientStop Color="#00120D0A" Offset="0.991"/>
-        				</RadialGradientBrush>
-        			</Ellipse.Fill>
         		</Ellipse>
-        		<Ellipse x:Name="Halo" HorizontalAlignment="Center" Height="480" StrokeThickness="0" VerticalAlignment="Bottom" Width="480" Margin="3,0,-3,260" RenderTransformOrigin="0.5,0.5">
+        		<Ellipse x:Name="Halo" HorizontalAlignment="Center" Height="480" StrokeThickness="0" VerticalAlignment="Bottom" Width="480" Margin="3,0,-3,260" RenderTransformOrigin="0.5,0.5" Fill="{StaticResource HaloGradientBrush}">
         			<Ellipse.RenderTransform>
         				<CompositeTransform/>
         			</Ellipse.RenderTransform>
-        			<Ellipse.Fill>
-        				<RadialGradientBrush>
-        					<GradientStop Color="#5059291D" Offset="0.853"/>
-        					<GradientStop Color="#FFFDECBA"/>
-        					<GradientStop Color="#66DFA769" Offset="0.461"/>
-        					<GradientStop Color="#628E522E" Offset="0.672"/>
-        					<GradientStop Color="#00120D0A" Offset="0.991"/>
-        				</RadialGradientBrush>
-        			</Ellipse.Fill>
         		</Ellipse>
         		<Grid x:Name="Candle" Margin="0,0,0,45" VerticalAlignment="Bottom" Height="364" Width="200">
         			<Ellipse x:Name="BottomShadow" Height="70" StrokeThickness="0" VerticalAlignment="Bottom" Margin="0,0,0,-35" RenderTransformOrigin="0.5,0.5" Opacity="0.995">
@@ -202,19 +206,7 @@
         					</LinearGradientBrush>
         				</Rectangle.Fill>
         			</Rectangle>
-        			<Rectangle x:Name="BodyGlow" StrokeThickness="0" Margin="0,0,0,-45">
-        				<Rectangle.Fill>
-        					<RadialGradientBrush Center="0.504,0" GradientOrigin="0.504,0" RadiusX="1.665" RadiusY="1.005">
-        						<GradientStop Color="#B2FEE8A4" Offset="0.237"/>
-        						<GradientStop Color="#642A1A0D" Offset="0.996"/>
-        						<GradientStop Color="#FFFFFED7"/>
-        						<GradientStop Color="#99FFC26F" Offset="0.371"/>
-        						<GradientStop Color="#7EB77737" Offset="0.474"/>
-        						<GradientStop Color="#64552F1C" Offset="0.642"/>
-        						<GradientStop Color="#002F2015" Offset="1"/>
-        					</RadialGradientBrush>
-        				</Rectangle.Fill>
-        			</Rectangle>
+        			<Rectangle x:Name="BodyGlow" StrokeThickness="0" Margin="0,0,0,-20" Fill="{StaticResource CandleHaloBrush}"/>
         			<Ellipse x:Name="Top" HorizontalAlignment="Center" Height="70" StrokeThickness="0" VerticalAlignment="Top" Width="200" Margin="0,-35,0,0">
         				<Ellipse.Projection>
         					<PlaneProjection RotationX="50"/>
@@ -250,7 +242,7 @@
         					</Ellipse.Fill>
         				</Ellipse>
         			</Grid>
-        			<Grid x:Name="Flame" HorizontalAlignment="Center" Height="180" VerticalAlignment="Top" Width="130" RenderTransformOrigin="0.5,1" Margin="0,-200,-4,0">
+        			<Grid x:Name="Flame" HorizontalAlignment="Center" Height="180" VerticalAlignment="Top" Width="130" RenderTransformOrigin="0.5,0.95" Margin="0,-200,-4,0">
         				<Grid.RenderTransform>
         					<CompositeTransform/>
         				</Grid.RenderTransform>
@@ -277,7 +269,7 @@
         					<Ellipse.Fill>
         						<RadialGradientBrush RadiusY="0.713" RadiusX="0.839" Center="0.496,0.283" GradientOrigin="0.496,0.283">
         							<GradientStop Color="#FF4B6CC1" Offset="0.884"/>
-        							<GradientStop Color="#00FDFBEF" Offset="0.776"/>
+        							<GradientStop Color="#00FDFBEF" Offset="0.543"/>
         							<GradientStop Color="#004C3955" Offset="0.991"/>
         							<GradientStop Color="#FF5F6C9E" Offset="0.927"/>
         						</RadialGradientBrush>
