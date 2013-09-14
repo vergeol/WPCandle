@@ -11,6 +11,17 @@ using System.Windows.Media.Animation;
 
 namespace WPCandle
 {
+
+    public enum CandleColor 
+    {
+        White,
+        Blue, 
+        Fuchsia,
+        Orange,
+        Green,
+        Purple
+    }
+
     public partial class IndividualCandleControl : UserControl
     {
 
@@ -18,6 +29,50 @@ namespace WPCandle
         public Storyboard FlickerSb;
         public Storyboard BurnageSb;
         public bool IsRotated = false;
+
+
+
+        public CandleColor CurrentColor
+        {
+            get { return (CandleColor)GetValue(CurrentColorProperty); }
+            set { SetValue(CurrentColorProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for CurrentColor.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty CurrentColorProperty =
+            DependencyProperty.Register("CurrentColor", typeof(CandleColor), typeof(IndividualCandleControl), new PropertyMetadata(OnColorChanged));
+
+        private static void OnColorChanged(DependencyObject element, DependencyPropertyChangedEventArgs e)
+        {
+            (element as IndividualCandleControl).UpdateColor();
+        }
+
+        public void UpdateColor()
+        {
+            switch (CurrentColor)
+            {
+                case CandleColor.White:
+                    VisualStateManager.GoToState(this, WhiteVisualState.Name, true);
+                    break;
+                case CandleColor.Blue:
+                    VisualStateManager.GoToState(this, BlueVisualState.Name, true);
+                    break;
+                case CandleColor.Fuchsia:
+                    VisualStateManager.GoToState(this, FuchsiaVisualState.Name, true);
+                    break;
+                case CandleColor.Orange:
+                    VisualStateManager.GoToState(this, OrangeVisualState.Name, true);
+                    break;
+                case CandleColor.Green:
+                    VisualStateManager.GoToState(this, GreenVisualState.Name, true);
+                    break;
+                case CandleColor.Purple:
+                    VisualStateManager.GoToState(this, PurpleVisualState.Name, true);
+                    break;
+                default:
+                    break;
+            }
+        }
 
         public IndividualCandleControl()
         {

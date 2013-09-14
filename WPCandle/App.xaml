@@ -9,7 +9,14 @@
     <Application.Resources>
     	<ResourceDictionary>
     		<ResourceDictionary.MergedDictionaries>
-    			<ResourceDictionary Source="RedCandleResourceDictionary.xaml"/>
+    			<ResourceDictionary Source="ThemeResourceDictionary.xaml"/>
+    			<ResourceDictionary Source="Resources/WhiteCandleResourceDictionary.xaml"/>
+    			<ResourceDictionary Source="Resources/BlueCandleResourceDictionary.xaml"/>
+    			<ResourceDictionary Source="Resources/FuchsiaCandleResourceDictionary.xaml"/>
+    			<ResourceDictionary Source="Resources/PurpleCandleResourceDictionary.xaml"/>
+    			<ResourceDictionary Source="Resources/GreenCandleResourceDictionary.xaml"/>
+    			<ResourceDictionary Source="Resources/RedCandleResourceDictionary.xaml"/>
+    			<ResourceDictionary Source="Resources/OrangeWhiteCandleResourceDictionary.xaml"/>
     		</ResourceDictionary.MergedDictionaries>
     	</ResourceDictionary>
     </Application.Resources>
