@@ -15,9 +15,9 @@
 		<LinearGradientBrush.RelativeTransform>
 			<CompositeTransform CenterY="0.5" CenterX="0.5" Rotation="90"/>
 		</LinearGradientBrush.RelativeTransform>
-		<GradientStop Color="#FF5B1FA2" Offset="0.498"/>
-		<GradientStop Color="#FF3B016C" Offset="0.996"/>
-		<GradientStop Color="#FF3B016C"/>
+		<GradientStop Color="#FF943DFB" Offset="0.498"/>
+		<GradientStop Color="#FF5C347E" Offset="0.996"/>
+		<GradientStop Color="#FF5C347E"/>
 	</LinearGradientBrush>
 	<RadialGradientBrush x:Key="Purple_CandleWickZoneBrush">
 		<GradientStop Color="#FF7A36CB" Offset="1"/>

@@ -8,6 +8,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using System.Windows.Media.Animation;
+using System.Windows.Threading;
 
 namespace WPCandle
 {
@@ -28,10 +29,14 @@ namespace WPCandle
         public Random r = new Random();
         public Storyboard FlickerSb;
         public Storyboard BurnageSb;
+        public Storyboard SideBobSb;
+        public Storyboard SideBobSb2;
         public bool IsRotated = false;
+        public DispatcherTimer FlickerTimer = new DispatcherTimer();
+        public DispatcherTimer WindTimer = new DispatcherTimer();
 
 
-
+        #region CandleColor
         public CandleColor CurrentColor
         {
             get { return (CandleColor)GetValue(CurrentColorProperty); }
@@ -73,6 +78,7 @@ namespace WPCandle
                     break;
             }
         }
+        #endregion
 
         public IndividualCandleControl()
         {
@@ -82,17 +88,23 @@ namespace WPCandle
 
         void IndividualCandleControl_Loaded(object sender, RoutedEventArgs e)
         {
-            FlickerSb = (Storyboard)Resources["SlowFlickerStoryboard"];
-            if (FlickerSb != null)
-            {
-                FlickerSb.Completed += sb_Completed;
-                FlickerSb.Begin();
-            }
+            FlickerTimer.Tick += FlickerTimer_Tick;
+            WindTimer.Tick += WindTimer_Tick;
+
+            BeginBurning();
+            BeginRandomFlicker();
+            BeginRandomWind();
+        }
+
+
+        #region Burning
+        private void BeginBurning()
+        {
             BurnageSb = (Storyboard)Resources["BurningStoryboard"];
             if (BurnageSb != null)
             {
                 BurnageSb.Completed += BurnageSb_Completed;
-                BurnageSb.SpeedRatio = 0.01;
+                BurnageSb.SpeedRatio = 0.01 + 0.005 * (float)r.NextDouble();
                 BurnageSb.FillBehavior = FillBehavior.Stop;
                 BurnageSb.Begin();
             }
@@ -102,11 +114,82 @@ namespace WPCandle
         {
             BurnageSb.Begin();
         }
+        #endregion
+
+
+        #region Flicker
+        private void BeginRandomFlicker()
+        {
+            FlickerTimer.Interval = TimeSpan.FromSeconds(5.0 * (float)r.NextDouble());
+            FlickerSb = (Storyboard)Resources["SlowFlickerStoryboard"];
+            if (FlickerSb != null)
+            {
+                FlickerSb.Completed += sb_Completed;
+                FlickerTimer.Start();
+            }
+        
+        }
 
         void sb_Completed(object sender, EventArgs e)
         {
-            FlickerSb.SpeedRatio = 2.0 * (float)r.NextDouble();
+            FlickerTimer.Interval = TimeSpan.FromSeconds(5.0 * (float)r.NextDouble());
+            FlickerTimer.Start();
+
+        }
+
+        void FlickerTimer_Tick(object sender, EventArgs e)
+        {
+            FlickerTimer.Stop();
+            FlickerSb.SpeedRatio = 1.0 * (float)r.NextDouble();
             FlickerSb.Begin();
         }
+        #endregion
+
+
+        #region Wind
+        private void BeginRandomWind()
+        {
+            WindTimer.Interval = TimeSpan.FromSeconds(5.0 * (float)r.NextDouble());
+
+            SideBobSb = (Storyboard)Resources["SideBobStoryboard"];
+            if (SideBobSb != null)
+            {
+                SideBobSb.Completed += SideBobSb_Completed;
+            }
+            SideBobSb2 = (Storyboard)Resources["SideBobStoryboard2"];
+            if (SideBobSb2 != null)
+            {
+                SideBobSb2.Completed += SideBobSb_Completed;
+            }
+            WindTimer.Start();
+        }
+
+
+
+        void SideBobSb_Completed(object sender, EventArgs e)
+        {
+            WindTimer.Interval = TimeSpan.FromSeconds(5.0 * (float)r.NextDouble());
+            WindTimer.Start();
+            
+        }
+
+
+        void WindTimer_Tick(object sender, EventArgs e)
+        {
+            WindTimer.Stop();
+
+            if (r.NextDouble() > 0.5)
+            {
+                SideBobSb.SpeedRatio = 0.25 * (float)r.NextDouble()+ 0.15;
+                SideBobSb.Begin();
+            }
+            else
+            {
+                SideBobSb2.SpeedRatio = 0.25 * (float)r.NextDouble() + 0.15;
+                SideBobSb2.Begin();
+            }
+        }
+        #endregion
+
     }
 }

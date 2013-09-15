@@ -12,7 +12,7 @@
 		<Storyboard x:Name="SlowFlickerStoryboard" SpeedRatio="0.20" AutoReverse="False">
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationX)" Storyboard.TargetName="Flame">
 				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="18">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="20">
 					<EasingDoubleKeyFrame.EasingFunction>
 						<ElasticEase EasingMode="EaseOut" Springiness="8"/>
 					</EasingDoubleKeyFrame.EasingFunction>
@@ -28,66 +28,246 @@
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="Candle">
 				<EasingDoubleKeyFrame KeyTime="0" Value="364"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="70"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="70"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="70"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="364"/>
 			</DoubleAnimationUsingKeyFrames>
 			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="CandleHaloGlow">
 				<DiscreteObjectKeyFrame KeyTime="0">
 					<DiscreteObjectKeyFrame.Value>
-						<Thickness>0,0,0,-22</Thickness>
+						<Thickness>0</Thickness>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+				<DiscreteObjectKeyFrame KeyTime="0:0:2.6">
+					<DiscreteObjectKeyFrame.Value>
+						<Thickness>0</Thickness>
 					</DiscreteObjectKeyFrame.Value>
 				</DiscreteObjectKeyFrame>
 			</ObjectAnimationUsingKeyFrames>
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="Halo">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="303"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="303"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="303"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="0"/>
 			</DoubleAnimationUsingKeyFrames>
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Halo">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="-3"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="-3"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="-3"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="0"/>
 			</DoubleAnimationUsingKeyFrames>
-			<DoubleAnimation Duration="0:0:2" To="339" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="HaloGeneral" d:IsOptimized="True"/>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="HaloGeneral">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="339"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="Flame">
+				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0.6">
 					<EasingDoubleKeyFrame.EasingFunction>
 						<CubicEase EasingMode="EaseIn"/>
 					</EasingDoubleKeyFrame.EasingFunction>
 				</EasingDoubleKeyFrame>
 				<EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="0.2"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="0.2"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="0.2"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="1"/>
 			</DoubleAnimationUsingKeyFrames>
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="CandleHaloGlow">
+				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="1"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="0"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="1"/>
 			</DoubleAnimationUsingKeyFrames>
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="HaloGeneral">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0.4"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0.3"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="0.045"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="0.045"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.2"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.5"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="0.4"/>
 			</DoubleAnimationUsingKeyFrames>
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Halo">
+				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0.7"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="0"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="1"/>
 			</DoubleAnimationUsingKeyFrames>
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Flame">
+				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="1"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="0"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="1"/>
 			</DoubleAnimationUsingKeyFrames>
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="BottomShadow">
 				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0.095"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="1"/>
 			</DoubleAnimationUsingKeyFrames>
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="BottomShadow">
 				<EasingDoubleKeyFrame KeyTime="0" Value="2"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="5"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="2"/>
 			</DoubleAnimationUsingKeyFrames>
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="BottomShadow">
 				<EasingDoubleKeyFrame KeyTime="0" Value="2"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="5"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="2"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="2"/>
+			</DoubleAnimationUsingKeyFrames>
+			<PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.OpacityMask).(RadialGradientBrush.Center)" Storyboard.TargetName="OrnamentsContainer">
+				<EasingPointKeyFrame KeyTime="0" Value="0.5,-1.4"/>
+				<EasingPointKeyFrame KeyTime="0:0:2" Value="0.5,-0.4"/>
+				<EasingPointKeyFrame KeyTime="0:0:2.5" Value="0.5,-0.4"/>
+				<EasingPointKeyFrame KeyTime="0:0:2.7" Value="0.5,-1.4"/>
+			</PointAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.OpacityMask).(GradientBrush.GradientStops)[0].(GradientStop.Offset)" Storyboard.TargetName="OrnamentsContainer">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0.264"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0.356"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="0.356"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="0.264"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.OpacityMask).(GradientBrush.GradientStops)[1].(GradientStop.Offset)" Storyboard.TargetName="OrnamentsContainer">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0.226"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="0.167"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0.222"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="0.222"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="0.226"/>
+			</DoubleAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="HaloGeneral">
+				<DiscreteObjectKeyFrame KeyTime="0:0:2">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Visible</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+				<DiscreteObjectKeyFrame KeyTime="0:0:2.2">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Collapsed</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+				<DiscreteObjectKeyFrame KeyTime="0:0:2.6">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Visible</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Halo">
+				<DiscreteObjectKeyFrame KeyTime="0:0:2">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Visible</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+				<DiscreteObjectKeyFrame KeyTime="0:0:2.2">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Collapsed</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+				<DiscreteObjectKeyFrame KeyTime="0:0:2.6">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Visible</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Flame">
+				<DiscreteObjectKeyFrame KeyTime="0:0:2.2">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Collapsed</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+				<DiscreteObjectKeyFrame KeyTime="0:0:2.5">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Collapsed</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+				<DiscreteObjectKeyFrame KeyTime="0:0:2.7">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Visible</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+			</ObjectAnimationUsingKeyFrames>
+		</Storyboard>
+		<Storyboard x:Name="SideBobStoryboard" SpeedRatio="0.25">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.SkewX)" Storyboard.TargetName="FlameContainerRotation">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-5">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<ElasticEase EasingMode="EaseOut" Springiness="0"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<BackEase EasingMode="EaseOut" Amplitude="0.5"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Halo">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="15">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<ElasticEase EasingMode="EaseOut" Springiness="0"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<BackEase EasingMode="EaseOut" Amplitude="0.5"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="HaloGeneral">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="9">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<ElasticEase EasingMode="EaseOut" Springiness="0"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<BackEase EasingMode="EaseOut" Amplitude="0.5"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+			<ColorAnimation Duration="0:0:3" To="#C8142D8C" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[3].(GradientStop.Color)" Storyboard.TargetName="ellipse" d:IsOptimized="True"/>
+		</Storyboard>
+		<Storyboard x:Name="SideBobStoryboard2" SpeedRatio="0.25">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.SkewX)" Storyboard.TargetName="FlameContainerRotation">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="5">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<ElasticEase EasingMode="EaseOut" Springiness="0" Oscillations="1"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<BackEase EasingMode="EaseOut" Amplitude="0.5"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Halo">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-15">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<ElasticEase EasingMode="EaseOut" Springiness="0" Oscillations="1"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<BackEase EasingMode="EaseOut" Amplitude="0.5"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="HaloGeneral">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-9">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<ElasticEase EasingMode="EaseOut" Springiness="0" Oscillations="1"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<BackEase EasingMode="EaseOut" Amplitude="0.5"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
 			</DoubleAnimationUsingKeyFrames>
 		</Storyboard>
 	</UserControl.Resources>
@@ -374,20 +554,74 @@
     					</ObjectAnimationUsingKeyFrames>
     				</Storyboard>
     			</VisualState>
+    			<VisualState x:Name="BlackVisualState">
+    				<Storyboard>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="Body">
+    						<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Black_BodyBrush}"/>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="Bottom">
+    						<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Black_BodyBrush}"/>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="CandleHaloGlow">
+    						<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Black_CandleHaloBrush}"/>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="CandleWickZone">
+    						<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Black_CandleWickZoneBrush}"/>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path">
+    						<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Black_BodyBrush}"/>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path1">
+    						<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Black_BodyBrush}"/>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path2">
+    						<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Black_BodyBrush}"/>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path3">
+    						<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Black_BodyBrush}"/>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path4">
+    						<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Black_BodyBrush}"/>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path5">
+    						<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Black_BodyBrush}"/>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path6">
+    						<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Black_BodyBrush}"/>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path7">
+    						<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Black_BodyBrush}"/>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path8">
+    						<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Black_BodyBrush}"/>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path9">
+    						<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Black_BodyBrush}"/>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path10">
+    						<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Black_BodyBrush}"/>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path11">
+    						<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Black_BodyBrush}"/>
+    					</ObjectAnimationUsingKeyFrames>
+    				</Storyboard>
+    			</VisualState>
     		</VisualStateGroup>
     	</VisualStateManager.VisualStateGroups>
     	<Viewbox>
     		<Grid x:Name="ContentPanel" Margin="0" Width="480" Height="768">
-    			<Ellipse x:Name="HaloGeneral" HorizontalAlignment="Center" Height="813" StrokeThickness="0" VerticalAlignment="Bottom" Width="813" Margin="-167,-156,-166,111" Opacity="0.4" RenderTransformOrigin="0.5,0.5" Fill="{StaticResource HaloGradientBrush}" IsHitTestVisible="False">
-    				<Ellipse.RenderTransform>
-    					<CompositeTransform/>
-    				</Ellipse.RenderTransform>
-    			</Ellipse>
-    			<Ellipse x:Name="Halo" HorizontalAlignment="Center" Height="480" StrokeThickness="0" VerticalAlignment="Bottom" Width="480" Margin="3,0,-3,260" RenderTransformOrigin="0.5,0.5" Fill="{StaticResource HaloGradientBrush}" IsHitTestVisible="False">
-    				<Ellipse.RenderTransform>
-    					<CompositeTransform/>
-    				</Ellipse.RenderTransform>
-    			</Ellipse>
+    			<Grid x:Name="HalosContainerRotation" Margin="-167,-156,-166,111">
+    				<Ellipse x:Name="HaloGeneral" HorizontalAlignment="Center" Height="813" StrokeThickness="0" VerticalAlignment="Bottom" Width="813" Opacity="0.4" RenderTransformOrigin="0.5,0.5" Fill="{StaticResource HaloGradientBrush}" IsHitTestVisible="False">
+    					<Ellipse.RenderTransform>
+    						<CompositeTransform/>
+    					</Ellipse.RenderTransform>
+    				</Ellipse>
+    				<Ellipse x:Name="Halo" HorizontalAlignment="Center" Height="480" StrokeThickness="0" VerticalAlignment="Bottom" Width="480" Margin="170,0,163,149" RenderTransformOrigin="0.5,0.5" Fill="{StaticResource HaloGradientBrush}" IsHitTestVisible="False">
+    					<Ellipse.RenderTransform>
+    						<CompositeTransform/>
+    					</Ellipse.RenderTransform>
+    				</Ellipse>
+    			</Grid>
     			<Grid x:Name="Candle" Margin="0,0,0,45" VerticalAlignment="Bottom" Height="364" Width="200">
     				<Ellipse x:Name="BottomShadow" Height="70" StrokeThickness="0" VerticalAlignment="Bottom" Margin="0,0,0,-35" RenderTransformOrigin="0.5,0.5" Opacity="0.995">
     					<Ellipse.Projection>
@@ -409,13 +643,15 @@
     					</Ellipse.Projection>
     				</Ellipse>
     				<Rectangle x:Name="Body" StrokeThickness="0" Fill="{StaticResource White_BodyBrush}"/>
-    				<Rectangle x:Name="CandleHaloGlow" StrokeThickness="0" Margin="0,0,0,-20" Fill="{StaticResource White_CandleHaloBrush}"/>
-    				<Ellipse x:Name="CandleWickZone" HorizontalAlignment="Center" Height="70" StrokeThickness="0" VerticalAlignment="Top" Width="200" Margin="0,-35,0,0" Fill="{StaticResource White_CandleWickZoneBrush}">
-    					<Ellipse.Projection>
-    						<PlaneProjection RotationX="50"/>
-    					</Ellipse.Projection>
-    				</Ellipse>
-    				<Grid x:Name="Meche" Margin="0,-54,0,0" VerticalAlignment="Top" HorizontalAlignment="Center">
+    				<Grid x:Name="Glows" Margin="0,0,0,-20">
+    					<Rectangle x:Name="CandleHaloGlow" StrokeThickness="0" Margin="0" Fill="{StaticResource White_CandleHaloBrush}"/>
+    					<Ellipse x:Name="CandleWickZone" HorizontalAlignment="Center" Height="70" StrokeThickness="0" VerticalAlignment="Top" Width="200" Fill="{StaticResource White_CandleWickZoneBrush}" Margin="0,-35,0,0">
+    						<Ellipse.Projection>
+    							<PlaneProjection RotationX="50"/>
+    						</Ellipse.Projection>
+    					</Ellipse>
+    				</Grid>
+    				<Grid x:Name="Meche" Margin="0,-50,0,0" VerticalAlignment="Top" HorizontalAlignment="Center">
     					<Grid.OpacityMask>
     						<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
     							<GradientStop Color="Black" Offset="0.816"/>
@@ -445,63 +681,82 @@
     						</Ellipse.Fill>
     					</Ellipse>
     				</Grid>
-    				<Grid x:Name="Flame" HorizontalAlignment="Center" Height="180" VerticalAlignment="Top" Width="130" RenderTransformOrigin="0.5,0.95" Margin="0,-200,-4,0">
+    				<Grid x:Name="FlameContainerRotation" Margin="10,-213,0,0" RenderTransformOrigin="0.5,1" Height="180" VerticalAlignment="Top" HorizontalAlignment="Center" Width="88">
     					<Grid.RenderTransform>
     						<CompositeTransform/>
     					</Grid.RenderTransform>
-    					<Grid.Projection>
-    						<PlaneProjection CenterOfRotationX="1" CenterOfRotationY="1"/>
-    					</Grid.Projection>
-    					<Ellipse HorizontalAlignment="Left" Height="150.105" Margin="43,35,0,-5" StrokeThickness="0" VerticalAlignment="Top" Width="44.279" Fill="White">
-    						<Ellipse.OpacityMask>
-    							<LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-    								<GradientStop Offset="0"/>
-    								<GradientStop Color="Transparent" Offset="1"/>
-    								<GradientStop Color="#4DFFFFFF" Offset="0.226"/>
-    								<GradientStop Color="#EBFFFFFF" Offset="0.548"/>
-    							</LinearGradientBrush>
-    						</Ellipse.OpacityMask>
-    					</Ellipse>
-    					<Ellipse HorizontalAlignment="Left" Height="150.105" Margin="43,35,0,-5" StrokeThickness="0" VerticalAlignment="Top" Width="44.279">
-    						<Ellipse.OpacityMask>
-    							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-    								<GradientStop Color="#C1000000" Offset="0.841"/>
-    								<GradientStop Color="Transparent" Offset="1"/>
-    							</LinearGradientBrush>
-    						</Ellipse.OpacityMask>
-    						<Ellipse.Fill>
-    							<RadialGradientBrush RadiusY="0.713" RadiusX="0.839" Center="0.496,0.283" GradientOrigin="0.496,0.283">
-    								<GradientStop Color="#FF4B6CC1" Offset="0.884"/>
-    								<GradientStop Color="#00FDFBEF" Offset="0.543"/>
-    								<GradientStop Color="#004C3955" Offset="0.991"/>
-    								<GradientStop Color="#FF5F6C9E" Offset="0.927"/>
-    							</RadialGradientBrush>
-    						</Ellipse.Fill>
-    					</Ellipse>
-    					<Ellipse HorizontalAlignment="Left" Height="122" Margin="43,48,0,0" StrokeThickness="0" VerticalAlignment="Top" Width="44.279" Fill="White" Opacity="0.305">
-    						<Ellipse.OpacityMask>
-    							<LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-    								<GradientStop Offset="0"/>
-    								<GradientStop Color="Transparent" Offset="1"/>
-    								<GradientStop Color="#4DFFFFFF" Offset="0.335"/>
-    								<GradientStop Color="White" Offset="0.548"/>
-    							</LinearGradientBrush>
-    						</Ellipse.OpacityMask>
-    					</Ellipse>
+    					<Grid x:Name="Flame" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.95">
+    						<Grid.RenderTransform>
+    							<CompositeTransform/>
+    						</Grid.RenderTransform>
+    						<Grid.Projection>
+    							<PlaneProjection CenterOfRotationX="1" CenterOfRotationY="1"/>
+    						</Grid.Projection>
+    						<Ellipse HorizontalAlignment="Center" Height="150.105" Margin="0,35,0,-5" StrokeThickness="0" VerticalAlignment="Center" Width="44.279" Fill="White">
+    							<Ellipse.OpacityMask>
+    								<LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+    									<GradientStop Offset="0"/>
+    									<GradientStop Color="Transparent" Offset="0.912"/>
+    									<GradientStop Color="#4DFFFFFF" Offset="0.226"/>
+    									<GradientStop Color="#EBFFFFFF" Offset="0.427"/>
+    								</LinearGradientBrush>
+    							</Ellipse.OpacityMask>
+    						</Ellipse>
+    						<Ellipse x:Name="ellipse" HorizontalAlignment="Center" Height="150.105" Margin="0,35,0,-5" StrokeThickness="0" VerticalAlignment="Center" Width="44.279">
+    							<Ellipse.OpacityMask>
+    								<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+    									<GradientStop Color="#C1000000" Offset="0.983"/>
+    									<GradientStop Color="Transparent" Offset="1"/>
+    								</LinearGradientBrush>
+    							</Ellipse.OpacityMask>
+    							<Ellipse.Fill>
+    								<RadialGradientBrush RadiusY="0.713" RadiusX="0.839" Center="0.496,0.283" GradientOrigin="0.496,0.283">
+    									<GradientStop Color="#794174F7" Offset="0.873"/>
+    									<GradientStop Color="Transparent" Offset="0.804"/>
+    									<GradientStop Color="#00122B8B" Offset="0.991"/>
+    									<GradientStop Color="#33122B8B" Offset="0.939"/>
+    								</RadialGradientBrush>
+    							</Ellipse.Fill>
+    						</Ellipse>
+    						<Ellipse HorizontalAlignment="Center" Height="122" Margin="0,48,0,0" StrokeThickness="0" VerticalAlignment="Center" Width="44.279" Fill="White" Opacity="0.305">
+    							<Ellipse.OpacityMask>
+    								<LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+    									<GradientStop Offset="0"/>
+    									<GradientStop Color="Transparent" Offset="1"/>
+    									<GradientStop Color="#4DFFFFFF" Offset="0.335"/>
+    									<GradientStop Color="White" Offset="0.548"/>
+    								</LinearGradientBrush>
+    							</Ellipse.OpacityMask>
+    						</Ellipse>
+    					</Grid>
     				</Grid>
-    				<Grid x:Name="Ornaments" Margin="-2,0,-3,32" VerticalAlignment="Bottom">
-    					<Path x:Name="path" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,2.001,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round"/>
-    					<Path x:Name="path1" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,0,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" Opacity="0.495" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round"/>
-    					<Path x:Name="path2" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,35.501,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round"/>
-    					<Path x:Name="path3" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,33.5,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" Opacity="0.495" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round"/>
-    					<Path x:Name="path4" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,68.836,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round"/>
-    					<Path x:Name="path5" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,66.835,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" Opacity="0.495" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round"/>
-    					<Path x:Name="path6" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,108.838,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round"/>
-    					<Path x:Name="path7" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,106.837,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" Opacity="0.495" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round"/>
-    					<Path x:Name="path8" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,148.84,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round"/>
-    					<Path x:Name="path9" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,146.839,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" Opacity="0.495" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round"/>
-    					<Path x:Name="path10" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,182.175,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round"/>
-    					<Path x:Name="path11" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,180.174,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" Opacity="0.495" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round"/>
+    				<Grid x:Name="OrnamentsContainer" Margin="-3,0" IsHitTestVisible="False">
+    					<Grid.OpacityMask>
+    						<RadialGradientBrush GradientOrigin="0.5,0" RadiusX="3" RadiusY="2" Center="0.5,-1.4">
+    							<GradientStop Color="Black" Offset="0.264"/>
+    							<GradientStop Color="Transparent" Offset="0.226"/>
+    						</RadialGradientBrush>
+    					</Grid.OpacityMask>
+    					<Grid x:Name="Ornaments" VerticalAlignment="Bottom" Height="228" Margin="0,0,0,32">
+    						<Grid.OpacityMask>
+    							<LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+    								<GradientStop Color="Black" Offset="0.113"/>
+    								<GradientStop Color="Transparent"/>
+    							</LinearGradientBrush>
+    						</Grid.OpacityMask>
+    						<Path x:Name="path" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,2.001,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round"/>
+    						<Path x:Name="path1" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,0,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" Opacity="0.495" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round"/>
+    						<Path x:Name="path2" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,35.501,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round"/>
+    						<Path x:Name="path3" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,33.5,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" Opacity="0.495" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round"/>
+    						<Path x:Name="path4" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,68.836,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round"/>
+    						<Path x:Name="path5" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,66.835,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" Opacity="0.495" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round"/>
+    						<Path x:Name="path6" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,108.838,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round"/>
+    						<Path x:Name="path7" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,106.837,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" Opacity="0.495" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round"/>
+    						<Path x:Name="path8" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,148.84,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round"/>
+    						<Path x:Name="path9" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,146.839,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" Opacity="0.495" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round"/>
+    						<Path x:Name="path10" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,182.175,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round"/>
+    						<Path x:Name="path11" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,180.174,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" Opacity="0.495" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round"/>
+    					</Grid>
     				</Grid>
     			</Grid>
     			<Image Margin="803,137,-535,349" Source="/Assets/Inspiration/candle_flame_by_sketchesatmidnight-d3433s3.jpg" Stretch="Fill" Visibility="Collapsed"/>

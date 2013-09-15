@@ -25,5 +25,26 @@
 		<GradientStop Color="#FFFDF4C5" Offset="1"/>
 		<GradientStop Color="White"/>
 	</RadialGradientBrush>
+	<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" x:Key="Black_BodyBrush">
+		<LinearGradientBrush.RelativeTransform>
+			<CompositeTransform CenterY="0.5" CenterX="0.5" Rotation="90"/>
+		</LinearGradientBrush.RelativeTransform>
+		<GradientStop Color="#FF5B5B5B" Offset="0.494"/>
+		<GradientStop Color="#FF363636" Offset="0.996"/>
+		<GradientStop Color="#FF363636"/>
+	</LinearGradientBrush>
+	<RadialGradientBrush x:Key="Black_CandleHaloBrush" Center="0.504,0" GradientOrigin="0.504,0" RadiusX="1.665" RadiusY="1.005">
+		<GradientStop Color="#FFCBB084" Offset="0.237"/>
+		<GradientStop Color="#642A1A0D" Offset="0.996"/>
+		<GradientStop Color="#FFF3F3F3"/>
+		<GradientStop Color="#FF7A6C5C" Offset="0.385"/>
+		<GradientStop Color="#7E64594E" Offset="0.474"/>
+		<GradientStop Color="#64403D3A" Offset="0.642"/>
+		<GradientStop Offset="1"/>
+	</RadialGradientBrush>
+	<RadialGradientBrush x:Key="Black_CandleWickZoneBrush">
+		<GradientStop Color="#FFE2DEC9" Offset="1"/>
+		<GradientStop Color="#FFE4E4E4"/>
+	</RadialGradientBrush>
 	<!-- Resource dictionary entries should be defined here. -->
 </ResourceDictionary>
