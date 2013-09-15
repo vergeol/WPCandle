@@ -104,7 +104,7 @@ namespace WPCandle
             if (BurnageSb != null)
             {
                 BurnageSb.Completed += BurnageSb_Completed;
-                BurnageSb.SpeedRatio = 0.05 + 0.005 * (float)r.NextDouble();
+                BurnageSb.SpeedRatio = 0.005 + 0.005 * (float)r.NextDouble();
                 BurnageSb.FillBehavior = FillBehavior.Stop;
                 BurnageSb.Begin();
             }
