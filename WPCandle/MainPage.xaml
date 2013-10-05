@@ -8,7 +8,10 @@
     xmlns:local="clr-namespace:WPCandle" x:Name="phoneApplicationPage" 
     x:Class="WPCandle.MainPage"
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
-    SupportedOrientations="PortraitOrLandscape" Orientation="Landscape" shell:SystemTray.IsVisible="True">
+    SupportedOrientations="PortraitOrLandscape" Orientation="Landscape" 
+	shell:SystemTray.IsVisible="True"
+	shell:SystemTray.Opacity="0"
+	shell:SystemTray.BackgroundColor="Transparent">
 
 	<phone:PhoneApplicationPage.FontFamily>
 		<StaticResource ResourceKey="PhoneFontFamilyNormal"/>
@@ -80,7 +83,7 @@
 					<CompositeTransform ScaleX="-1"/>
 				</local:IndividualCandleControl.RenderTransform>
 			</local:IndividualCandleControl>
-			<local:IndividualCandleControl Margin="449,148,137,-42" RenderTransformOrigin="0.5,0.5" CurrentColor="Green">
+			<local:IndividualCandleControl Margin="444,178,142,-3" RenderTransformOrigin="0.5,0.5" CurrentColor="Green">
 				<local:IndividualCandleControl.RenderTransform>
 					<CompositeTransform ScaleX="-1"/>
 				</local:IndividualCandleControl.RenderTransform>
