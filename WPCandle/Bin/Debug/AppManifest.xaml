@@ -2,5 +2,9 @@
   <Deployment.Parts>
     <AssemblyPart x:Name="WPCandle" Source="WPCandle.dll" />
     <AssemblyPart x:Name="Guilbored.PhoneLibrary" Source="Guilbored.PhoneLibrary.dll" />
+    <AssemblyPart x:Name="Microsoft.Expression.Interactions" Source="Microsoft.Expression.Interactions.dll" />
+    <AssemblyPart x:Name="Microsoft.Phone.Controls.Toolkit" Source="Microsoft.Phone.Controls.Toolkit.dll" />
+    <AssemblyPart x:Name="System.Windows.Interactivity" Source="System.Windows.Interactivity.dll" />
+    <AssemblyPart x:Name="Microsoft.Phone.Controls" Source="Microsoft.Phone.Controls.dll" />
   </Deployment.Parts>
 </Deployment>

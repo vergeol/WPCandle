@@ -617,19 +617,19 @@
     	<Viewbox>
     		<Grid x:Name="ContentPanel" Margin="0" Width="480" Height="768">
     			<Grid x:Name="HalosContainerRotation" Margin="-167,-156,-166,111" IsHitTestVisible="False">
-    				<Ellipse x:Name="HaloGeneral" HorizontalAlignment="Center" Height="813" StrokeThickness="0" VerticalAlignment="Bottom" Width="813" Opacity="0.4" RenderTransformOrigin="0.5,0.5" Fill="{StaticResource HaloGradientBrush}" IsHitTestVisible="False">
+    				<Ellipse x:Name="HaloGeneral" HorizontalAlignment="Center" Height="813" StrokeThickness="0" VerticalAlignment="Bottom" Width="813" Opacity="0.4" RenderTransformOrigin="0.5,0.5" Fill="{StaticResource HaloGradientBrush}" IsHitTestVisible="False" CacheMode="BitmapCache">
     					<Ellipse.RenderTransform>
     						<CompositeTransform/>
     					</Ellipse.RenderTransform>
     				</Ellipse>
-    				<Ellipse x:Name="Halo" HorizontalAlignment="Center" Height="480" StrokeThickness="0" VerticalAlignment="Bottom" Width="480" Margin="170,0,163,149" RenderTransformOrigin="0.5,0.5" Fill="{StaticResource HaloGradientBrush}" IsHitTestVisible="False">
+    				<Ellipse x:Name="Halo" HorizontalAlignment="Center" Height="480" StrokeThickness="0" VerticalAlignment="Bottom" Width="480" Margin="170,0,163,149" RenderTransformOrigin="0.5,0.5" Fill="{StaticResource HaloGradientBrush}" IsHitTestVisible="False" CacheMode="BitmapCache">
     					<Ellipse.RenderTransform>
     						<CompositeTransform/>
     					</Ellipse.RenderTransform>
     				</Ellipse>
     			</Grid>
     			<Grid x:Name="Candle" Margin="0,0,0,45" VerticalAlignment="Bottom" Height="364" Width="200">
-    				<Ellipse x:Name="BottomShadow" Height="70" StrokeThickness="0" VerticalAlignment="Bottom" Margin="0,0,0,-35" RenderTransformOrigin="0.5,0.5" Opacity="0.995">
+    				<Ellipse x:Name="BottomShadow" Height="70" StrokeThickness="0" VerticalAlignment="Bottom" Margin="0,0,0,-35" RenderTransformOrigin="0.5,0.5" Opacity="0.995" IsHitTestVisible="False">
     					<Ellipse.Projection>
     						<PlaneProjection RotationX="63"/>
     					</Ellipse.Projection>
@@ -651,7 +651,7 @@
     				<Rectangle x:Name="Body" StrokeThickness="0" Fill="{StaticResource White_BodyBrush}"/>
     				<Grid x:Name="Glows" Margin="0,0,0,-20" IsHitTestVisible="False">
     					<Rectangle x:Name="CandleHaloGlow" StrokeThickness="0" Margin="0" Fill="{StaticResource White_CandleHaloBrush}"/>
-    					<Ellipse x:Name="CandleWickZone" HorizontalAlignment="Center" Height="70" StrokeThickness="0" VerticalAlignment="Top" Width="200" Fill="{StaticResource White_CandleWickZoneBrush}" Margin="0,-35,0,0">
+    					<Ellipse x:Name="CandleWickZone" HorizontalAlignment="Center" Height="70" StrokeThickness="0" VerticalAlignment="Top" Width="200" Fill="{StaticResource White_CandleWickZoneBrush}" Margin="0,-35,0,0" CacheMode="BitmapCache">
     						<Ellipse.Projection>
     							<PlaneProjection RotationX="50"/>
     						</Ellipse.Projection>
@@ -743,7 +743,7 @@
     							<GradientStop Color="Transparent" Offset="0.226"/>
     						</RadialGradientBrush>
     					</Grid.OpacityMask>
-    					<Grid x:Name="Ornaments" VerticalAlignment="Bottom" Height="228" Margin="0,0,0,32">
+    					<Grid x:Name="Ornaments" VerticalAlignment="Bottom" Height="228" Margin="0,0,0,32" CacheMode="BitmapCache">
     						<Grid.OpacityMask>
     							<LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
     								<GradientStop Color="Black" Offset="0.113"/>
