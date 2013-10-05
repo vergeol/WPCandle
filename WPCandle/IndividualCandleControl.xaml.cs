@@ -84,6 +84,12 @@ namespace WPCandle
         {
             InitializeComponent();
             Loaded += IndividualCandleControl_Loaded;
+            Tap += IndividualCandleControl_Tap;
+        }
+
+        void IndividualCandleControl_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            SetNextColor();
         }
 
         void IndividualCandleControl_Loaded(object sender, RoutedEventArgs e)
@@ -193,9 +199,31 @@ namespace WPCandle
 
         #region Color
 
-        void ChangeColorPerhaps()
+        void SetNextColor()
         {
-
+            switch (CurrentColor)
+            {
+                case CandleColor.White:
+                    CurrentColor = CandleColor.Blue;
+                    break;
+                case CandleColor.Blue:
+                    CurrentColor = CandleColor.Fuchsia;
+                    break;
+                case CandleColor.Fuchsia:
+                    CurrentColor = CandleColor.Orange;
+                    break;
+                case CandleColor.Orange:
+                    CurrentColor = CandleColor.Green;
+                    break;
+                case CandleColor.Green:
+                    CurrentColor = CandleColor.Purple;
+                    break;
+                case CandleColor.Purple:
+                    CurrentColor = CandleColor.White;
+                    break;
+                default:
+                    break;
+            }
         }
 
         #endregion

@@ -8,7 +8,7 @@
     xmlns:local="clr-namespace:WPCandle" x:Name="phoneApplicationPage" 
     x:Class="WPCandle.MainPage"
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
-    SupportedOrientations="PortraitOrLandscape" Orientation="Landscape">
+    SupportedOrientations="PortraitOrLandscape" Orientation="Landscape" shell:SystemTray.IsVisible="True">
 
 	<phone:PhoneApplicationPage.FontFamily>
 		<StaticResource ResourceKey="PhoneFontFamilyNormal"/>
@@ -49,7 +49,7 @@
 					<PlaneProjection CenterOfRotationY="1"/>
 				</Rectangle.Projection>
 			</Rectangle>
-			<local:IndividualCandleControl Margin="184,261,489,74" RenderTransformOrigin="0.5,0.5" CurrentColor="Green">
+			<local:IndividualCandleControl Margin="208,225,445,57" RenderTransformOrigin="0.5,0.5" CurrentColor="Green">
 				<local:IndividualCandleControl.RenderTransform>
 					<CompositeTransform ScaleX="-1"/>
 				</local:IndividualCandleControl.RenderTransform>
@@ -80,18 +80,18 @@
 					<CompositeTransform ScaleX="-1"/>
 				</local:IndividualCandleControl.RenderTransform>
 			</local:IndividualCandleControl>
-			<local:IndividualCandleControl Margin="-70,-85,-60,0"/>
-			<local:IndividualCandleControl Margin="462,315,211,20" RenderTransformOrigin="0.5,0.5" CurrentColor="Green">
+			<local:IndividualCandleControl Margin="449,148,137,-42" RenderTransformOrigin="0.5,0.5" CurrentColor="Green">
 				<local:IndividualCandleControl.RenderTransform>
 					<CompositeTransform ScaleX="-1"/>
 				</local:IndividualCandleControl.RenderTransform>
 			</local:IndividualCandleControl>
-			<local:IndividualCandleControl Margin="249,328,424,7" RenderTransformOrigin="0.5,0.5" CurrentColor="Blue">
+			<local:IndividualCandleControl Margin="-70,-85,-60,0" d:IsLocked="True"/>
+			<local:IndividualCandleControl Margin="220,349,428,0" RenderTransformOrigin="0.5,0.5" CurrentColor="Blue">
 				<local:IndividualCandleControl.RenderTransform>
 					<CompositeTransform ScaleX="-1"/>
 				</local:IndividualCandleControl.RenderTransform>
 			</local:IndividualCandleControl>
-			<local:IndividualCandleControl Margin="560,324,113,11" RenderTransformOrigin="0.5,0.5">
+			<local:IndividualCandleControl Margin="559,354,114,-19" RenderTransformOrigin="0.5,0.5">
 				<local:IndividualCandleControl.RenderTransform>
 					<CompositeTransform ScaleX="-1"/>
 				</local:IndividualCandleControl.RenderTransform>

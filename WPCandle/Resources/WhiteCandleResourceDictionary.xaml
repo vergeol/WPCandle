@@ -29,17 +29,17 @@
 		<LinearGradientBrush.RelativeTransform>
 			<CompositeTransform CenterY="0.5" CenterX="0.5" Rotation="90"/>
 		</LinearGradientBrush.RelativeTransform>
-		<GradientStop Color="#FF5B5B5B" Offset="0.494"/>
-		<GradientStop Color="#FF363636" Offset="0.996"/>
-		<GradientStop Color="#FF363636"/>
+		<GradientStop Color="#FF3E3E3E" Offset="0.494"/>
+		<GradientStop Color="#FF232323" Offset="0.992"/>
+		<GradientStop Color="#FF232323"/>
 	</LinearGradientBrush>
 	<RadialGradientBrush x:Key="Black_CandleHaloBrush" Center="0.504,0" GradientOrigin="0.504,0" RadiusX="1.665" RadiusY="1.005">
-		<GradientStop Color="#FFCBB084" Offset="0.237"/>
+		<GradientStop Color="#E5DAD1C3" Offset="0.237"/>
 		<GradientStop Color="#642A1A0D" Offset="0.996"/>
-		<GradientStop Color="#FFF3F3F3"/>
-		<GradientStop Color="#FF7A6C5C" Offset="0.385"/>
-		<GradientStop Color="#7E64594E" Offset="0.474"/>
-		<GradientStop Color="#64403D3A" Offset="0.642"/>
+		<GradientStop Color="#FFF1EEEA"/>
+		<GradientStop Color="#F274726F" Offset="0.385"/>
+		<GradientStop Color="#7E4F4F4F" Offset="0.474"/>
+		<GradientStop Color="#1A383838" Offset="0.642"/>
 		<GradientStop Offset="1"/>
 	</RadialGradientBrush>
 	<RadialGradientBrush x:Key="Black_CandleWickZoneBrush">

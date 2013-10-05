@@ -282,7 +282,7 @@
     	<VisualStateManager.VisualStateGroups>
     		<VisualStateGroup x:Name="VisualStateGroup">
     			<VisualStateGroup.Transitions>
-    				<VisualTransition GeneratedDuration="0:0:0.7"/>
+    				<VisualTransition GeneratedDuration="0"/>
     			</VisualStateGroup.Transitions>
     			<VisualState x:Name="WhiteVisualState">
     				<Storyboard>
@@ -616,7 +616,7 @@
     	</VisualStateManager.VisualStateGroups>
     	<Viewbox>
     		<Grid x:Name="ContentPanel" Margin="0" Width="480" Height="768">
-    			<Grid x:Name="HalosContainerRotation" Margin="-167,-156,-166,111">
+    			<Grid x:Name="HalosContainerRotation" Margin="-167,-156,-166,111" IsHitTestVisible="False">
     				<Ellipse x:Name="HaloGeneral" HorizontalAlignment="Center" Height="813" StrokeThickness="0" VerticalAlignment="Bottom" Width="813" Opacity="0.4" RenderTransformOrigin="0.5,0.5" Fill="{StaticResource HaloGradientBrush}" IsHitTestVisible="False">
     					<Ellipse.RenderTransform>
     						<CompositeTransform/>
@@ -649,7 +649,7 @@
     					</Ellipse.Projection>
     				</Ellipse>
     				<Rectangle x:Name="Body" StrokeThickness="0" Fill="{StaticResource White_BodyBrush}"/>
-    				<Grid x:Name="Glows" Margin="0,0,0,-20">
+    				<Grid x:Name="Glows" Margin="0,0,0,-20" IsHitTestVisible="False">
     					<Rectangle x:Name="CandleHaloGlow" StrokeThickness="0" Margin="0" Fill="{StaticResource White_CandleHaloBrush}"/>
     					<Ellipse x:Name="CandleWickZone" HorizontalAlignment="Center" Height="70" StrokeThickness="0" VerticalAlignment="Top" Width="200" Fill="{StaticResource White_CandleWickZoneBrush}" Margin="0,-35,0,0">
     						<Ellipse.Projection>
@@ -657,7 +657,7 @@
     						</Ellipse.Projection>
     					</Ellipse>
     				</Grid>
-    				<Grid x:Name="Meche" Margin="0,-50,0,0" VerticalAlignment="Top" HorizontalAlignment="Center">
+    				<Grid x:Name="Meche" Margin="0,-50,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" IsHitTestVisible="False">
     					<Grid.OpacityMask>
     						<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
     							<GradientStop Color="Black" Offset="0.816"/>
@@ -765,8 +765,8 @@
     					</Grid>
     				</Grid>
     			</Grid>
-    			<Image Margin="803,137,-535,349" Source="/Assets/Inspiration/candle_flame_by_sketchesatmidnight-d3433s3.jpg" Stretch="Fill" Visibility="Collapsed"/>
-    			<Image Margin="714,452,-535,128" Source="/Assets/Inspiration/candle_superpose2.png" Stretch="Fill" Opacity="0.87" Visibility="Collapsed"/></Grid>
+    			<Image Margin="803,137,-535,349" Source="/Assets/Inspiration/candle_flame_by_sketchesatmidnight-d3433s3.jpg" Stretch="Fill" Visibility="Collapsed" IsHitTestVisible="False"/>
+    			<Image Margin="714,452,-535,128" Source="/Assets/Inspiration/candle_superpose2.png" Stretch="Fill" Opacity="0.87" Visibility="Collapsed" IsHitTestVisible="False"/></Grid>
     	</Viewbox>
 
     </Grid>

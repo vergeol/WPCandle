@@ -3,11 +3,11 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 	<!-- Resource dictionary entries should be defined here. -->
 		<RadialGradientBrush x:Key="Green_CandleHaloBrush" Center="0.504,0" GradientOrigin="0.504,0" RadiusX="1.665" RadiusY="1.005">
-		<GradientStop Color="#CCC1E85A" Offset="0.237"/>
+		<GradientStop Color="#CCC2DA81" Offset="0.237"/>
 		<GradientStop Color="#642A1A0D" Offset="0.996"/>
-		<GradientStop Color="#E5D9F0A8" Offset="0.004"/>
-		<GradientStop Color="#B295BA34" Offset="0.371"/>
-		<GradientStop Color="#996BA02C" Offset="0.456"/>
+		<GradientStop Color="#E5EAF1DA" Offset="0.004"/>
+		<GradientStop Color="#B29CBF41" Offset="0.371"/>
+		<GradientStop Color="#B27C9B2C" Offset="0.46"/>
 		<GradientStop Color="#7E6F8B26" Offset="0.628"/>
 		<GradientStop Color="#00232F15" Offset="0.992"/>
 	</RadialGradientBrush>
@@ -20,8 +20,8 @@
 		<GradientStop Color="#FF6D9C0E"/>
 	</LinearGradientBrush>
 	<RadialGradientBrush x:Key="Green_CandleWickZoneBrush">
-		<GradientStop Color="#FF9CCB36" Offset="1"/>
-		<GradientStop Color="#FFE8FFB7" Offset="0.77"/>
-		<GradientStop Color="#FFBFEC89" Offset="0.891"/>
+		<GradientStop Color="#FFCDEC8D" Offset="1"/>
+		<GradientStop Color="#FFE6F0C5" Offset="0.77"/>
+		<GradientStop Color="#FFE1F0B9" Offset="0.891"/>
 	</RadialGradientBrush>
 </ResourceDictionary>
