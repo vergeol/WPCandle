@@ -49,49 +49,49 @@
 					<PlaneProjection CenterOfRotationY="1"/>
 				</Rectangle.Projection>
 			</Rectangle>
-			<local:IndividualCandleControl Margin="184,261,489,74" RenderTransformOrigin="0.5,0.5" CurrentColor="Orange">
+			<local:IndividualCandleControl Margin="184,261,489,74" RenderTransformOrigin="0.5,0.5" CurrentColor="Green">
 				<local:IndividualCandleControl.RenderTransform>
 					<CompositeTransform ScaleX="-1"/>
 				</local:IndividualCandleControl.RenderTransform>
 			</local:IndividualCandleControl>
-			<local:IndividualCandleControl Margin="438,262,235,73" RenderTransformOrigin="0.5,0.5" CurrentColor="Blue">
+			<local:IndividualCandleControl Margin="438,262,235,73" RenderTransformOrigin="0.5,0.5" CurrentColor="Orange">
 				<local:IndividualCandleControl.RenderTransform>
 					<CompositeTransform ScaleX="-1"/>
 				</local:IndividualCandleControl.RenderTransform>
 			</local:IndividualCandleControl>
-			<local:IndividualCandleControl Margin="-41,44,529,48" CurrentColor="Purple"/>
-			<local:IndividualCandleControl Margin="514,100,72,56" RenderTransformOrigin="0.5,0.5" CurrentColor="Fuchsia">
+			<local:IndividualCandleControl Margin="-41,44,529,48" CurrentColor="Orange"/>
+			<local:IndividualCandleControl Margin="514,100,72,56" RenderTransformOrigin="0.5,0.5" CurrentColor="Purple">
 				<local:IndividualCandleControl.RenderTransform>
 					<CompositeTransform ScaleX="-1"/>
 				</local:IndividualCandleControl.RenderTransform>
 			</local:IndividualCandleControl>
-			<local:IndividualCandleControl Margin="551,75,-122,17" RenderTransformOrigin="0.5,0.5" CurrentColor="Green">
+			<local:IndividualCandleControl Margin="551,75,-122,17" RenderTransformOrigin="0.5,0.5" CurrentColor="Fuchsia">
 				<local:IndividualCandleControl.RenderTransform>
 					<CompositeTransform ScaleX="-1"/>
 				</local:IndividualCandleControl.RenderTransform>
 			</local:IndividualCandleControl>
-			<local:IndividualCandleControl Margin="50,143,467,13" RenderTransformOrigin="0.5,0.5" CurrentColor="Green">
+			<local:IndividualCandleControl Margin="50,143,467,13" RenderTransformOrigin="0.5,0.5" CurrentColor="Fuchsia">
 				<local:IndividualCandleControl.RenderTransform>
 					<CompositeTransform ScaleX="-1"/>
 				</local:IndividualCandleControl.RenderTransform>
 			</local:IndividualCandleControl>
-			<local:IndividualCandleControl Margin="-11,319,684,16" RenderTransformOrigin="0.5,0.5" CurrentColor="Fuchsia">
+			<local:IndividualCandleControl Margin="-11,319,684,16" RenderTransformOrigin="0.5,0.5" CurrentColor="Blue">
 				<local:IndividualCandleControl.RenderTransform>
 					<CompositeTransform ScaleX="-1"/>
 				</local:IndividualCandleControl.RenderTransform>
 			</local:IndividualCandleControl>
 			<local:IndividualCandleControl Margin="-70,-85,-60,0"/>
-			<local:IndividualCandleControl Margin="462,315,211,20" RenderTransformOrigin="0.5,0.5" CurrentColor="Orange">
+			<local:IndividualCandleControl Margin="462,315,211,20" RenderTransformOrigin="0.5,0.5" CurrentColor="Green">
 				<local:IndividualCandleControl.RenderTransform>
 					<CompositeTransform ScaleX="-1"/>
 				</local:IndividualCandleControl.RenderTransform>
 			</local:IndividualCandleControl>
-			<local:IndividualCandleControl Margin="249,328,424,7" RenderTransformOrigin="0.5,0.5" CurrentColor="Fuchsia">
+			<local:IndividualCandleControl Margin="249,328,424,7" RenderTransformOrigin="0.5,0.5" CurrentColor="Blue">
 				<local:IndividualCandleControl.RenderTransform>
 					<CompositeTransform ScaleX="-1"/>
 				</local:IndividualCandleControl.RenderTransform>
 			</local:IndividualCandleControl>
-			<local:IndividualCandleControl Margin="560,324,113,11" RenderTransformOrigin="0.5,0.5" CurrentColor="Blue">
+			<local:IndividualCandleControl Margin="560,324,113,11" RenderTransformOrigin="0.5,0.5">
 				<local:IndividualCandleControl.RenderTransform>
 					<CompositeTransform ScaleX="-1"/>
 				</local:IndividualCandleControl.RenderTransform>

@@ -24,7 +24,7 @@
 				<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0.995"/>
 			</DoubleAnimationUsingKeyFrames>
 		</Storyboard>
-		<Storyboard x:Name="BurningStoryboard" >
+		<Storyboard x:Name="BurningStoryboard" SpeedRatio="0.1" >
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="Candle">
 				<EasingDoubleKeyFrame KeyTime="0" Value="364"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="70"/>

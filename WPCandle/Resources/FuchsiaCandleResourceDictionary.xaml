@@ -2,10 +2,10 @@
 	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 	<RadialGradientBrush x:Key="Fuchsia_CandleHaloBrush" Center="0.504,0" GradientOrigin="0.504,0" RadiusX="1.665" RadiusY="1.005">
-		<GradientStop Color="#CCE85A86" Offset="0.237"/>
+		<GradientStop Color="#CCEA648D" Offset="0.237"/>
 		<GradientStop Color="#642A1A0D" Offset="0.996"/>
-		<GradientStop Color="#E5F0A8BF" Offset="0.004"/>
-		<GradientStop Color="#B2BA345F" Offset="0.371"/>
+		<GradientStop Color="#E5F9CBDA" Offset="0.004"/>
+		<GradientStop Color="#B2C12C5C" Offset="0.371"/>
 		<GradientStop Color="#99A02C51" Offset="0.474"/>
 		<GradientStop Color="#7E8B264F" Offset="0.628"/>
 		<GradientStop Color="#002F2015" Offset="1"/>

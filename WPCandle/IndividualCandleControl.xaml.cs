@@ -191,5 +191,14 @@ namespace WPCandle
         }
         #endregion
 
+        #region Color
+
+        void ChangeColorPerhaps()
+        {
+
+        }
+
+        #endregion
+
     }
 }
