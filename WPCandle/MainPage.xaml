@@ -72,7 +72,7 @@
 		<VisualStateManager.VisualStateGroups>
 			<VisualStateGroup x:Name="VisualStateGroup">
 				<VisualStateGroup.Transitions>
-					<VisualTransition GeneratedDuration="0:0:1">
+					<VisualTransition GeneratedDuration="0:0:2">
 						<VisualTransition.GeneratedEasingFunction>
 							<QuinticEase EasingMode="EaseOut"/>
 						</VisualTransition.GeneratedEasingFunction>
@@ -95,7 +95,7 @@
 								</DiscreteObjectKeyFrame.Value>
 							</DiscreteObjectKeyFrame>
 						</ObjectAnimationUsingKeyFrames>
-						<DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="InfoGrid" d:IsOptimized="True"/>
+						<DoubleAnimation Duration="0" To="1130" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="InfoGrid" d:IsOptimized="True"/>
 					</Storyboard>
 				</VisualState>
 				<VisualState x:Name="Info">
@@ -115,8 +115,8 @@
 								</DiscreteObjectKeyFrame.Value>
 							</DiscreteObjectKeyFrame>
 						</ObjectAnimationUsingKeyFrames>
-						<DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="InfoGrid" d:IsOptimized="True"/>
-						<DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="InfoGrid" d:IsOptimized="True"/>
+						<DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="InfoGrid" d:IsOptimized="True"/>
+						<DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="InfoGrid" d:IsOptimized="True"/>
 					</Storyboard>
 				</VisualState>
 			</VisualStateGroup>
@@ -127,7 +127,7 @@
 		</Grid.RowDefinitions>
 
         <!--TitlePanel contains the name of the application and page title-->
-		<StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28"/>
+		<StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28" Visibility="Collapsed"/>
 		<Grid x:Name="Scene" Grid.RowSpan="2">
 			<Rectangle x:Name="Floor" Height="320" Stroke="Black" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,1" StrokeThickness="0" Margin="-70,0">
 				<Rectangle.Fill>
@@ -145,87 +145,108 @@
 					<PlaneProjection CenterOfRotationY="1"/>
 				</Rectangle.Projection>
 			</Rectangle>
-			<local:IndividualCandleControl Margin="208,225,445,57" RenderTransformOrigin="0.5,0.5" CurrentColor="Green">
+			<local:IndividualCandleControl Margin="190,176,437,39" RenderTransformOrigin="0.5,0.5" CurrentColor="Green">
 				<local:IndividualCandleControl.RenderTransform>
 					<CompositeTransform ScaleX="-1"/>
 				</local:IndividualCandleControl.RenderTransform>
 			</local:IndividualCandleControl>
-			<local:IndividualCandleControl Margin="438,262,235,73" RenderTransformOrigin="0.5,0.5" CurrentColor="Orange">
+			<local:IndividualCandleControl Margin="441,176,178,17" RenderTransformOrigin="0.5,0.5" CurrentColor="Orange">
 				<local:IndividualCandleControl.RenderTransform>
 					<CompositeTransform ScaleX="-1"/>
 				</local:IndividualCandleControl.RenderTransform>
 			</local:IndividualCandleControl>
-			<local:IndividualCandleControl Margin="-41,44,529,48" CurrentColor="Orange"/>
-			<local:IndividualCandleControl Margin="514,100,72,56" RenderTransformOrigin="0.5,0.5" CurrentColor="Purple">
+			<local:IndividualCandleControl Margin="30,44,458,48" CurrentColor="Orange"/>
+			<local:IndividualCandleControl Margin="504,121,82,35" RenderTransformOrigin="0.5,0.5" CurrentColor="Purple" Visibility="Collapsed">
 				<local:IndividualCandleControl.RenderTransform>
 					<CompositeTransform ScaleX="-1"/>
 				</local:IndividualCandleControl.RenderTransform>
 			</local:IndividualCandleControl>
-			<local:IndividualCandleControl Margin="515,68,-86,24" RenderTransformOrigin="0.5,0.5" CurrentColor="Fuchsia">
+			<local:IndividualCandleControl Margin="475,46,-46,46" RenderTransformOrigin="0.5,0.5" CurrentColor="Fuchsia">
 				<local:IndividualCandleControl.RenderTransform>
 					<CompositeTransform ScaleX="-1"/>
 				</local:IndividualCandleControl.RenderTransform>
 			</local:IndividualCandleControl>
-			<local:IndividualCandleControl Margin="50,143,467,13" RenderTransformOrigin="0.5,0.5" CurrentColor="Fuchsia">
+			<local:IndividualCandleControl Margin="-39,146,556,10" RenderTransformOrigin="0.5,0.5" CurrentColor="Fuchsia">
 				<local:IndividualCandleControl.RenderTransform>
 					<CompositeTransform ScaleX="-1"/>
 				</local:IndividualCandleControl.RenderTransform>
 			</local:IndividualCandleControl>
-			<local:IndividualCandleControl Margin="-15,322,667,13" RenderTransformOrigin="0.5,0.5" CurrentColor="Blue">
+			<local:IndividualCandleControl Margin="-15,322,667,13" RenderTransformOrigin="0.5,0.5" CurrentColor="Blue" Visibility="Collapsed">
 				<local:IndividualCandleControl.RenderTransform>
 					<CompositeTransform ScaleX="-1"/>
 				</local:IndividualCandleControl.RenderTransform>
 			</local:IndividualCandleControl>
-			<local:IndividualCandleControl Margin="440,196,146,42" RenderTransformOrigin="0.5,0.5" CurrentColor="Green">
+			<local:IndividualCandleControl Margin="462,232,124,6" RenderTransformOrigin="0.5,0.5" CurrentColor="Green">
 				<local:IndividualCandleControl.RenderTransform>
 					<CompositeTransform ScaleX="-1"/>
 				</local:IndividualCandleControl.RenderTransform>
 			</local:IndividualCandleControl>
-			<local:IndividualCandleControl Margin="-70,-85,-60,0" d:IsLocked="True"/>
+			<local:IndividualCandleControl Margin="-70,-85,-60,0" CurrentColor="Fuchsia" d:IsLocked="True"/>
 			<local:IndividualCandleControl Margin="220,349,428,0" RenderTransformOrigin="0.5,0.5" CurrentColor="Blue">
 				<local:IndividualCandleControl.RenderTransform>
 					<CompositeTransform ScaleX="-1"/>
 				</local:IndividualCandleControl.RenderTransform>
 			</local:IndividualCandleControl>
-			<local:IndividualCandleControl Margin="505,367,158,15" RenderTransformOrigin="0.5,0.5" FontFamily="Bellerose" Opacity="0.5">
+			<local:IndividualCandleControl Margin="505,367,158,15" RenderTransformOrigin="0.5,0.5" FontFamily="Bellerose" Opacity="0.5" Visibility="Collapsed">
 				<local:IndividualCandleControl.RenderTransform>
 					<CompositeTransform ScaleX="-1"/>
 				</local:IndividualCandleControl.RenderTransform>
 			</local:IndividualCandleControl>
-			<Grid x:Name="InfoGrid" Background="#99000000" RenderTransformOrigin="0.5,0">
+			<Grid x:Name="InfoGrid" Background="#99000000" RenderTransformOrigin="0.5,0" Opacity="0" IsHitTestVisible="False">
 				<Grid.RenderTransform>
-					<CompositeTransform ScaleX="0" ScaleY="0"/>
+					<CompositeTransform TranslateX="1130"/>
 				</Grid.RenderTransform>
-				<StackPanel x:Name="stackPanel" Margin="24,20,24,0" RenderTransformOrigin="0.5,0">
-					<StackPanel.RenderTransform>
+				<Grid x:Name="stackPanel" Margin="24,40,24,0" RenderTransformOrigin="0.5,0">
+					<Grid.RenderTransform>
 						<CompositeTransform/>
-					</StackPanel.RenderTransform>
-					<StackPanel Orientation="Horizontal" Margin="60,0,0,0">
+					</Grid.RenderTransform>
+					<StackPanel Orientation="Horizontal" VerticalAlignment="Top">
 						<TextBlock TextWrapping="Wrap" Text="R" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="96" TextOptions.TextHintingMode="Animated"/>
 						<TextBlock TextWrapping="Wrap" Text="omantic" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="96" Margin="-9,-4,0,0" TextOptions.TextHintingMode="Animated"/>
 					</StackPanel>
-					<StackPanel Margin="116,-27,0,0" Orientation="Horizontal" HorizontalAlignment="Left">
+					<StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="55,73,0,0" VerticalAlignment="Top">
 						<TextBlock TextWrapping="Wrap" Text="C" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="96" HorizontalAlignment="Right" TextOptions.TextHintingMode="Animated"/>
 						<TextBlock TextWrapping="Wrap" Text="andle" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="96" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="-4,-13,0,0" TextOptions.TextHintingMode="Animated"/>
 					</StackPanel>
-					<ScrollViewer Margin="0,10,0,0" >
-						<StackPanel Orientation="Vertical" Width="366">
-							<TextBlock TextWrapping="Wrap" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Gabriola" FontSize="29.333" TextOptions.TextHintingMode="Animated" Text="Romantic or not you’ll be sure to find yourself in situations when a flame is a must. Like when reading Faust in original on a rainy night. Sometimes it’s better when it’s artificial. Ideal solution for lighter-challenged and safety concerned lovers who don’t want to literally set their bed on fire. Not a concert or a vigil will go by with you not having what it takes to express your emotions."/>
-							<Grid Height="84" Margin="0,0,-66,0" HorizontalAlignment="Right">
-								<StackPanel Orientation="Horizontal" Margin="21,0,0,34">
-									<TextBlock TextWrapping="Wrap" Text="G" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="48" TextOptions.TextHintingMode="Animated"/>
-									<TextBlock TextWrapping="Wrap" Text="uilbored" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="48" Margin="-2,-4,0,0" TextOptions.TextHintingMode="Animated"/>
+					<ScrollViewer Margin="0,180,0,0" >
+						<StackPanel Orientation="Vertical" Margin="0,0,15,0">
+							<TextBlock TextWrapping="Wrap" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Gabriola" FontSize="32" TextOptions.TextHintingMode="Animated">
+								<Run FontWeight="Bold" Text="Why?"/>
+								<LineBreak/>
+								<Run Text="Romantic or not you’ll be sure to find yourself in situations when a flame is a must. Like when reading Faust in original on a rainy night. "/>
+								<LineBreak/>
+								<Run/>
+								<LineBreak/>
+								<Run FontWeight="Bold" Text="Sometimes it’s better when it’s artificial. "/>
+								<Run Text="Ideal solution for lighter-challenged and safety concerned lovers who don’t want to literally set their bed on fire. Not a concert or a vigil will go by with you not having what it takes to express your emotions. "/>
+								<LineBreak/>
+								<Run Text="You’ll never be out of candles – as long as your battery lives. "/>
+								<LineBreak/>
+								<Run/>
+								<LineBreak/>
+								<Run FontWeight="Bold" Text="What you need to know"/>
+								<LineBreak/>
+								<Run Text="Once the candle burns out, it will grow back on its own, no need to worry. You can change the color of a candle by tapping on it. Finally, be sure to flip your phone to landscape for another candle scenery!"/>
+								<LineBreak/>
+								<Run/>
+								<LineBreak/>
+								<Run Text="Have fun,"/>
+							</TextBlock>
+							<Grid HorizontalAlignment="Right" Margin="0,30,0,60">
+								<StackPanel Orientation="Horizontal" Margin="-41,0,0,0" VerticalAlignment="Top">
+									<TextBlock TextWrapping="Wrap" Text="G" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="64" TextOptions.TextHintingMode="Animated"/>
+									<TextBlock TextWrapping="Wrap" Text="uilbored" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="64" Margin="-2,-4,0,0" TextOptions.TextHintingMode="Animated"/>
 								</StackPanel>
-								<StackPanel Margin="24,34,0,0" Orientation="Horizontal" HorizontalAlignment="Left">
-									<TextBlock TextWrapping="Wrap" Text="&amp;" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="32" Margin="-1,7,0,0" TextOptions.TextHintingMode="Animated" Opacity="0.595"/>
-									<TextBlock TextWrapping="Wrap" Text="B" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="48" HorizontalAlignment="Right" TextOptions.TextHintingMode="Animated"/>
-									<TextBlock TextWrapping="Wrap" Text="unnzette" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="48" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="-4,-6,0,0" TextOptions.TextHintingMode="Animated"/>
+								<StackPanel Margin="8,40,0,0" Orientation="Horizontal" HorizontalAlignment="Left">
+									<TextBlock TextWrapping="Wrap" Text="&amp;" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="64" Margin="-1,7,0,0" TextOptions.TextHintingMode="Animated" Opacity="0.595"/>
+									<TextBlock TextWrapping="Wrap" Text="A" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="64" HorizontalAlignment="Right" TextOptions.TextHintingMode="Animated" VerticalAlignment="Bottom"/>
+									<TextBlock TextWrapping="Wrap" Text="nna" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="64" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="-4,-6,0,0" TextOptions.TextHintingMode="Animated"/>
 								</StackPanel>
 							</Grid>
 						</StackPanel>
 					</ScrollViewer>
-				</StackPanel>
-				<Button x:Name="ExitButton" Content="x" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,191,0,0" Width="72" Height="72" Opacity="0.3" Style="{StaticResource InfoButtonStyle}">
+				</Grid>
+				<Button x:Name="ExitButton" Content="x" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,40,20,0" Width="72" Height="72" Opacity="0.3" Style="{StaticResource InfoButtonStyle}">
 					<i:Interaction.Triggers>
 						<i:EventTrigger EventName="Click">
 							<ec:GoToStateAction StateName="No_Info"/>
@@ -234,7 +255,7 @@
 				</Button>
 			</Grid>
 		</Grid>
-		<Button x:Name="InfoButton" Content="i" HorizontalAlignment="Left" VerticalAlignment="Top" Width="72" Height="72" Opacity="0.245" Style="{StaticResource InfoButtonStyle}">
+		<Button x:Name="InfoButton" Content="i" HorizontalAlignment="Right" VerticalAlignment="Top" Width="72" Height="72" Opacity="0.295" Style="{StaticResource InfoButtonStyle}" Margin="18,40,20,18" Grid.Row="1">
 			<i:Interaction.Triggers>
 				<i:EventTrigger EventName="Click">
 					<ec:GoToStateAction StateName="Info"/>
