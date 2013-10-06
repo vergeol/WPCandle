@@ -8,7 +8,7 @@
     xmlns:local="clr-namespace:WPCandle" xmlns:System="clr-namespace:System;assembly=mscorlib" xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" xmlns:ec="clr-namespace:Microsoft.Expression.Interactivity.Core;assembly=Microsoft.Expression.Interactions" x:Name="phoneApplicationPage" 
     x:Class="WPCandle.MainPage"
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
-    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait" 
+    SupportedOrientations="PortraitOrLandscape" Orientation="Landscape" 
 	shell:SystemTray.IsVisible="True"
 	shell:SystemTray.Opacity="0"
 	shell:SystemTray.BackgroundColor="Transparent" FontFamily="{StaticResource PhoneFontFamilyNormal}" FontSize="{StaticResource PhoneFontSizeNormal}" Foreground="{StaticResource PhoneForegroundBrush}">
@@ -72,9 +72,9 @@
 		<VisualStateManager.VisualStateGroups>
 			<VisualStateGroup x:Name="VisualStateGroup">
 				<VisualStateGroup.Transitions>
-					<VisualTransition GeneratedDuration="0:0:2">
+					<VisualTransition GeneratedDuration="0:0:0.7">
 						<VisualTransition.GeneratedEasingFunction>
-							<QuinticEase EasingMode="EaseOut"/>
+							<CubicEase EasingMode="EaseOut"/>
 						</VisualTransition.GeneratedEasingFunction>
 					</VisualTransition>
 				</VisualStateGroup.Transitions>
@@ -96,6 +96,13 @@
 							</DiscreteObjectKeyFrame>
 						</ObjectAnimationUsingKeyFrames>
 						<DoubleAnimation Duration="0" To="1130" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="InfoGrid" d:IsOptimized="True"/>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.IsHitTestVisible)" Storyboard.TargetName="InfoButton_Copy">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<System:Boolean>True</System:Boolean>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
 					</Storyboard>
 				</VisualState>
 				<VisualState x:Name="Info">
@@ -117,6 +124,14 @@
 						</ObjectAnimationUsingKeyFrames>
 						<DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="InfoGrid" d:IsOptimized="True"/>
 						<DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="InfoGrid" d:IsOptimized="True"/>
+						<DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="InfoButton_Copy" d:IsOptimized="True"/>
+	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.IsHitTestVisible)" Storyboard.TargetName="InfoButton_Copy">
+		<DiscreteObjectKeyFrame KeyTime="0">
+			<DiscreteObjectKeyFrame.Value>
+				<System:Boolean>False</System:Boolean>
+			</DiscreteObjectKeyFrame.Value>
+		</DiscreteObjectKeyFrame>
+	</ObjectAnimationUsingKeyFrames>
 					</Storyboard>
 				</VisualState>
 			</VisualStateGroup>
@@ -145,12 +160,12 @@
 					<PlaneProjection CenterOfRotationY="1"/>
 				</Rectangle.Projection>
 			</Rectangle>
-			<local:IndividualCandleControl Margin="190,176,437,39" RenderTransformOrigin="0.5,0.5" CurrentColor="Green">
+			<local:IndividualCandleControl Margin="191,203,436,67" RenderTransformOrigin="0.5,0.5" CurrentColor="Green">
 				<local:IndividualCandleControl.RenderTransform>
 					<CompositeTransform ScaleX="-1"/>
 				</local:IndividualCandleControl.RenderTransform>
 			</local:IndividualCandleControl>
-			<local:IndividualCandleControl Margin="441,176,178,17" RenderTransformOrigin="0.5,0.5" CurrentColor="Orange">
+			<local:IndividualCandleControl Margin="411,201,208,80" RenderTransformOrigin="0.5,0.5" CurrentColor="Orange">
 				<local:IndividualCandleControl.RenderTransform>
 					<CompositeTransform ScaleX="-1"/>
 				</local:IndividualCandleControl.RenderTransform>
@@ -176,13 +191,13 @@
 					<CompositeTransform ScaleX="-1"/>
 				</local:IndividualCandleControl.RenderTransform>
 			</local:IndividualCandleControl>
-			<local:IndividualCandleControl Margin="462,232,124,6" RenderTransformOrigin="0.5,0.5" CurrentColor="Green">
+			<local:IndividualCandleControl Margin="-70,-85,-60,0" CurrentColor="Fuchsia"/>
+			<local:IndividualCandleControl Margin="477,224,109,14" RenderTransformOrigin="0.5,0.5" CurrentColor="Green">
 				<local:IndividualCandleControl.RenderTransform>
 					<CompositeTransform ScaleX="-1"/>
 				</local:IndividualCandleControl.RenderTransform>
 			</local:IndividualCandleControl>
-			<local:IndividualCandleControl Margin="-70,-85,-60,0" CurrentColor="Fuchsia" d:IsLocked="True"/>
-			<local:IndividualCandleControl Margin="220,349,428,0" RenderTransformOrigin="0.5,0.5" CurrentColor="Blue">
+			<local:IndividualCandleControl Margin="174,336,474,13" RenderTransformOrigin="0.5,0.5" CurrentColor="Blue">
 				<local:IndividualCandleControl.RenderTransform>
 					<CompositeTransform ScaleX="-1"/>
 				</local:IndividualCandleControl.RenderTransform>
@@ -200,17 +215,19 @@
 					<Grid.RenderTransform>
 						<CompositeTransform/>
 					</Grid.RenderTransform>
-					<StackPanel Orientation="Horizontal" VerticalAlignment="Top">
-						<TextBlock TextWrapping="Wrap" Text="R" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="96" TextOptions.TextHintingMode="Animated"/>
-						<TextBlock TextWrapping="Wrap" Text="omantic" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="96" Margin="-9,-4,0,0" TextOptions.TextHintingMode="Animated"/>
-					</StackPanel>
-					<StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="55,73,0,0" VerticalAlignment="Top">
-						<TextBlock TextWrapping="Wrap" Text="C" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="96" HorizontalAlignment="Right" TextOptions.TextHintingMode="Animated"/>
-						<TextBlock TextWrapping="Wrap" Text="andle" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="96" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="-4,-13,0,0" TextOptions.TextHintingMode="Animated"/>
-					</StackPanel>
-					<ScrollViewer Margin="0,180,0,0" >
+					<ScrollViewer Margin="0,-10,0,0" >
 						<StackPanel Orientation="Vertical" Margin="0,0,15,0">
-							<TextBlock TextWrapping="Wrap" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Gabriola" FontSize="32" TextOptions.TextHintingMode="Animated">
+							<Grid Height="173" Width="680">
+								<StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+									<TextBlock TextWrapping="Wrap" Text="R" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="96" TextOptions.TextHintingMode="Animated"/>
+									<TextBlock TextWrapping="Wrap" Text="omantic" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="96" Margin="-9,-4,0,0" TextOptions.TextHintingMode="Animated"/>
+								</StackPanel>
+								<StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="55,73,0,0" VerticalAlignment="Top">
+									<TextBlock TextWrapping="Wrap" Text="C" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="96" HorizontalAlignment="Right" TextOptions.TextHintingMode="Animated"/>
+									<TextBlock TextWrapping="Wrap" Text="andle" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="96" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="-4,-13,0,0" TextOptions.TextHintingMode="Animated"/>
+								</StackPanel>
+							</Grid>
+							<TextBlock TextWrapping="Wrap" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Gabriola" FontSize="32">
 								<Run FontWeight="Bold" Text="Why?"/>
 								<LineBreak/>
 								<Run Text="Romantic or not you’ll be sure to find yourself in situations when a flame is a must. Like when reading Faust in original on a rainy night. "/>
@@ -246,6 +263,16 @@
 						</StackPanel>
 					</ScrollViewer>
 				</Grid>
+				<Button x:Name="ExitButton_Copy" Content="x" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,40,20,0" Width="72" Height="72" Opacity="0.01" Style="{StaticResource InfoButtonStyle}" RenderTransformOrigin="0.5,0.5">
+					<Button.RenderTransform>
+						<CompositeTransform ScaleX="2" ScaleY="2"/>
+					</Button.RenderTransform>
+					<i:Interaction.Triggers>
+						<i:EventTrigger EventName="Click">
+							<ec:GoToStateAction StateName="No_Info"/>
+						</i:EventTrigger>
+					</i:Interaction.Triggers>
+				</Button>
 				<Button x:Name="ExitButton" Content="x" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,40,20,0" Width="72" Height="72" Opacity="0.3" Style="{StaticResource InfoButtonStyle}">
 					<i:Interaction.Triggers>
 						<i:EventTrigger EventName="Click">
@@ -255,6 +282,16 @@
 				</Button>
 			</Grid>
 		</Grid>
+		<Button x:Name="InfoButton_Copy" Content="i" HorizontalAlignment="Right" VerticalAlignment="Top" Width="72" Height="72" Opacity="0.01" Style="{StaticResource InfoButtonStyle}" Margin="0,40,20,0" Grid.Row="1" RenderTransformOrigin="0.5,0.5">
+			<Button.RenderTransform>
+				<CompositeTransform ScaleX="2" ScaleY="2"/>
+			</Button.RenderTransform>
+			<i:Interaction.Triggers>
+				<i:EventTrigger EventName="Click">
+					<ec:GoToStateAction StateName="Info"/>
+				</i:EventTrigger>
+			</i:Interaction.Triggers>
+		</Button>
 		<Button x:Name="InfoButton" Content="i" HorizontalAlignment="Right" VerticalAlignment="Top" Width="72" Height="72" Opacity="0.295" Style="{StaticResource InfoButtonStyle}" Margin="18,40,20,18" Grid.Row="1">
 			<i:Interaction.Triggers>
 				<i:EventTrigger EventName="Click">
