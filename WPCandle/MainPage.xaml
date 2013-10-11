@@ -8,10 +8,10 @@
     xmlns:local="clr-namespace:WPCandle" xmlns:System="clr-namespace:System;assembly=mscorlib" xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" xmlns:ec="clr-namespace:Microsoft.Expression.Interactivity.Core;assembly=Microsoft.Expression.Interactions" x:Name="phoneApplicationPage" 
     x:Class="WPCandle.MainPage"
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
-    SupportedOrientations="PortraitOrLandscape" Orientation="Landscape" 
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait" 
 	shell:SystemTray.IsVisible="True"
 	shell:SystemTray.Opacity="0"
-	shell:SystemTray.BackgroundColor="Transparent" FontFamily="{StaticResource PhoneFontFamilyNormal}" FontSize="{StaticResource PhoneFontSizeNormal}" Foreground="{StaticResource PhoneForegroundBrush}">
+	shell:SystemTray.BackgroundColor="Transparent" FontFamily="{StaticResource PhoneFontFamilyNormal}" FontSize="{StaticResource PhoneFontSizeNormal}" Background="Black">
 	<phone:PhoneApplicationPage.Resources>
 		<Style x:Key="InfoButtonStyle" TargetType="Button">
 			<Setter Property="Background" Value="Transparent"/>
@@ -66,9 +66,12 @@
 			</Setter>
 		</Style>
 	</phone:PhoneApplicationPage.Resources>
+	<phone:PhoneApplicationPage.Foreground>
+		<SolidColorBrush Color="#DEFFFFFF"/>
+	</phone:PhoneApplicationPage.Foreground>
 
 <!--LayoutRoot is the root grid where all page content is placed--><!--LayoutRoot is the root grid where all page content is placed-->
-	<Grid x:Name="LayoutRoot" Background="Transparent">
+	<Grid x:Name="LayoutRoot" Background="Black">
 		<VisualStateManager.VisualStateGroups>
 			<VisualStateGroup x:Name="VisualStateGroup">
 				<VisualStateGroup.Transitions>
@@ -219,15 +222,15 @@
 						<StackPanel Orientation="Vertical" Margin="0,0,15,0">
 							<Grid Height="173" Width="680">
 								<StackPanel Orientation="Horizontal" VerticalAlignment="Top">
-									<TextBlock TextWrapping="Wrap" Text="R" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="96" TextOptions.TextHintingMode="Animated"/>
-									<TextBlock TextWrapping="Wrap" Text="omantic" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="96" Margin="-9,-4,0,0" TextOptions.TextHintingMode="Animated"/>
+									<TextBlock TextWrapping="Wrap" Text="R" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="96" TextOptions.TextHintingMode="Animated" Foreground="#DEFFFFFF"/>
+									<TextBlock TextWrapping="Wrap" Text="omantic" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="96" Margin="-9,-4,0,0" TextOptions.TextHintingMode="Animated" Foreground="#DEFFFFFF"/>
 								</StackPanel>
 								<StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="55,73,0,0" VerticalAlignment="Top">
-									<TextBlock TextWrapping="Wrap" Text="C" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="96" HorizontalAlignment="Right" TextOptions.TextHintingMode="Animated"/>
-									<TextBlock TextWrapping="Wrap" Text="andle" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="96" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="-4,-13,0,0" TextOptions.TextHintingMode="Animated"/>
+									<TextBlock TextWrapping="Wrap" Text="C" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="96" HorizontalAlignment="Right" TextOptions.TextHintingMode="Animated" Foreground="#DEFFFFFF"/>
+									<TextBlock TextWrapping="Wrap" Text="andle" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="96" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="-4,-13,0,0" TextOptions.TextHintingMode="Animated" Foreground="#DEFFFFFF"/>
 								</StackPanel>
 							</Grid>
-							<TextBlock TextWrapping="Wrap" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Gabriola" FontSize="32">
+							<TextBlock TextWrapping="Wrap" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Gabriola" FontSize="32" Foreground="#DEFFFFFF">
 								<Run FontWeight="Bold" Text="Why?"/>
 								<LineBreak/>
 								<Run Text="Romantic or not you’ll be sure to find yourself in situations when a flame is a must. Like when reading Faust in original on a rainy night. "/>
@@ -251,13 +254,13 @@
 							</TextBlock>
 							<Grid HorizontalAlignment="Right" Margin="0,30,0,60">
 								<StackPanel Orientation="Horizontal" Margin="-41,0,0,0" VerticalAlignment="Top">
-									<TextBlock TextWrapping="Wrap" Text="G" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="64" TextOptions.TextHintingMode="Animated"/>
-									<TextBlock TextWrapping="Wrap" Text="uilbored" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="64" Margin="-2,-4,0,0" TextOptions.TextHintingMode="Animated"/>
+									<TextBlock TextWrapping="Wrap" Text="G" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="64" TextOptions.TextHintingMode="Animated" Foreground="#DEFFFFFF"/>
+									<TextBlock TextWrapping="Wrap" Text="uilbored" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="64" Margin="-2,-4,0,0" TextOptions.TextHintingMode="Animated" Foreground="#DEFFFFFF"/>
 								</StackPanel>
 								<StackPanel Margin="8,40,0,0" Orientation="Horizontal" HorizontalAlignment="Left">
-									<TextBlock TextWrapping="Wrap" Text="&amp;" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="64" Margin="-1,7,0,0" TextOptions.TextHintingMode="Animated" Opacity="0.595"/>
-									<TextBlock TextWrapping="Wrap" Text="A" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="64" HorizontalAlignment="Right" TextOptions.TextHintingMode="Animated" VerticalAlignment="Bottom"/>
-									<TextBlock TextWrapping="Wrap" Text="nna" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="64" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="-4,-6,0,0" TextOptions.TextHintingMode="Animated"/>
+									<TextBlock TextWrapping="Wrap" Text="&amp;" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="64" Margin="-1,7,0,0" TextOptions.TextHintingMode="Animated" Opacity="0.595" Foreground="#DEFFFFFF"/>
+									<TextBlock TextWrapping="Wrap" Text="A" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="64" HorizontalAlignment="Right" TextOptions.TextHintingMode="Animated" VerticalAlignment="Bottom" Foreground="#DEFFFFFF"/>
+									<TextBlock TextWrapping="Wrap" Text="nna" FontFamily="/WPCandle;component/Fonts/Fonts.zip#Parisish" FontSize="64" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="-4,-6,0,0" TextOptions.TextHintingMode="Animated" Foreground="#DEFFFFFF"/>
 								</StackPanel>
 							</Grid>
 						</StackPanel>
@@ -282,7 +285,7 @@
 				</Button>
 			</Grid>
 		</Grid>
-		<Button x:Name="InfoButton_Copy" Content="i" HorizontalAlignment="Right" VerticalAlignment="Top" Width="72" Height="72" Opacity="0.01" Style="{StaticResource InfoButtonStyle}" Margin="0,40,20,0" Grid.Row="1" RenderTransformOrigin="0.5,0.5">
+		<Button x:Name="InfoButton_Copy" Content="i" HorizontalAlignment="Right" VerticalAlignment="Top" Width="72" Height="72" Opacity="0.01" Style="{StaticResource InfoButtonStyle}" Margin="0,40,20,0" Grid.Row="1" RenderTransformOrigin="0.5,0.5" Background="#05000000" BorderBrush="#DEFFFFFF" Foreground="#DEFFFFFF">
 			<Button.RenderTransform>
 				<CompositeTransform ScaleX="2" ScaleY="2"/>
 			</Button.RenderTransform>
@@ -292,7 +295,7 @@
 				</i:EventTrigger>
 			</i:Interaction.Triggers>
 		</Button>
-		<Button x:Name="InfoButton" Content="i" HorizontalAlignment="Right" VerticalAlignment="Top" Width="72" Height="72" Opacity="0.295" Style="{StaticResource InfoButtonStyle}" Margin="18,40,20,18" Grid.Row="1">
+		<Button x:Name="InfoButton" Content="i" HorizontalAlignment="Right" VerticalAlignment="Top" Width="72" Height="72" Opacity="0.295" Style="{StaticResource InfoButtonStyle}" Margin="18,40,20,18" Grid.Row="1" Background="#05000000" BorderBrush="#DEFFFFFF" Foreground="#DEFFFFFF">
 			<i:Interaction.Triggers>
 				<i:EventTrigger EventName="Click">
 					<ec:GoToStateAction StateName="Info"/>
