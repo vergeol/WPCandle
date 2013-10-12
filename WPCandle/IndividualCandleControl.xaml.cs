@@ -80,6 +80,20 @@ namespace WPCandle
         }
         #endregion
 
+        #region angle
+
+        public double CandleAngle
+        {
+            get { return (double)GetValue(CandleAngleProperty); }
+            set { SetValue(CandleAngleProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for CandleAngle.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty CandleAngleProperty =
+            DependencyProperty.Register("CandleAngle", typeof(double), typeof(IndividualCandleControl), new PropertyMetadata(0.0));
+
+        #endregion
+
         public IndividualCandleControl()
         {
             InitializeComponent();
@@ -102,6 +116,14 @@ namespace WPCandle
             BeginRandomWind();
         }
 
+        #region motion
+
+        public void SetAngle(double angle)
+        {
+            CandleAngle = angle;
+        }
+
+        #endregion
 
         #region Burning
         private void BeginBurning()

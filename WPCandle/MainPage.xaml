@@ -8,7 +8,7 @@
     xmlns:local="clr-namespace:WPCandle" xmlns:System="clr-namespace:System;assembly=mscorlib" xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" xmlns:ec="clr-namespace:Microsoft.Expression.Interactivity.Core;assembly=Microsoft.Expression.Interactions" x:Name="phoneApplicationPage" 
     x:Class="WPCandle.MainPage"
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
-    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait" 
+    SupportedOrientations="PortraitOrLandscape" Orientation="Landscape" 
 	shell:SystemTray.IsVisible="True"
 	shell:SystemTray.Opacity="0"
 	shell:SystemTray.BackgroundColor="Transparent" FontFamily="{StaticResource PhoneFontFamilyNormal}" FontSize="{StaticResource PhoneFontSizeNormal}" Background="Black">
@@ -165,49 +165,49 @@
 			</Rectangle>
 			<local:IndividualCandleControl Margin="191,203,436,67" RenderTransformOrigin="0.5,0.5" CurrentColor="Green">
 				<local:IndividualCandleControl.RenderTransform>
-					<CompositeTransform ScaleX="-1"/>
+					<CompositeTransform/>
 				</local:IndividualCandleControl.RenderTransform>
 			</local:IndividualCandleControl>
 			<local:IndividualCandleControl Margin="411,201,208,80" RenderTransformOrigin="0.5,0.5" CurrentColor="Orange">
 				<local:IndividualCandleControl.RenderTransform>
-					<CompositeTransform ScaleX="-1"/>
+					<CompositeTransform/>
 				</local:IndividualCandleControl.RenderTransform>
 			</local:IndividualCandleControl>
 			<local:IndividualCandleControl Margin="30,44,458,48" CurrentColor="Orange"/>
 			<local:IndividualCandleControl Margin="504,121,82,35" RenderTransformOrigin="0.5,0.5" CurrentColor="Purple" Visibility="Collapsed">
 				<local:IndividualCandleControl.RenderTransform>
-					<CompositeTransform ScaleX="-1"/>
+					<CompositeTransform/>
 				</local:IndividualCandleControl.RenderTransform>
 			</local:IndividualCandleControl>
 			<local:IndividualCandleControl Margin="475,46,-46,46" RenderTransformOrigin="0.5,0.5" CurrentColor="Fuchsia">
 				<local:IndividualCandleControl.RenderTransform>
-					<CompositeTransform ScaleX="-1"/>
+					<CompositeTransform/>
 				</local:IndividualCandleControl.RenderTransform>
 			</local:IndividualCandleControl>
 			<local:IndividualCandleControl Margin="-39,146,556,10" RenderTransformOrigin="0.5,0.5" CurrentColor="Fuchsia">
 				<local:IndividualCandleControl.RenderTransform>
-					<CompositeTransform ScaleX="-1"/>
+					<CompositeTransform/>
 				</local:IndividualCandleControl.RenderTransform>
 			</local:IndividualCandleControl>
 			<local:IndividualCandleControl Margin="-15,322,667,13" RenderTransformOrigin="0.5,0.5" CurrentColor="Blue" Visibility="Collapsed">
 				<local:IndividualCandleControl.RenderTransform>
-					<CompositeTransform ScaleX="-1"/>
+					<CompositeTransform/>
 				</local:IndividualCandleControl.RenderTransform>
 			</local:IndividualCandleControl>
-			<local:IndividualCandleControl Margin="-70,-85,-60,0" CurrentColor="Fuchsia"/>
+			<local:IndividualCandleControl x:Name="MainCandle" Margin="-70,-85,-60,0" CurrentColor="Fuchsia"/>
 			<local:IndividualCandleControl Margin="477,224,109,14" RenderTransformOrigin="0.5,0.5" CurrentColor="Green">
 				<local:IndividualCandleControl.RenderTransform>
-					<CompositeTransform ScaleX="-1"/>
+					<CompositeTransform/>
 				</local:IndividualCandleControl.RenderTransform>
 			</local:IndividualCandleControl>
 			<local:IndividualCandleControl Margin="174,336,474,13" RenderTransformOrigin="0.5,0.5" CurrentColor="Blue">
 				<local:IndividualCandleControl.RenderTransform>
-					<CompositeTransform ScaleX="-1"/>
+					<CompositeTransform/>
 				</local:IndividualCandleControl.RenderTransform>
 			</local:IndividualCandleControl>
-			<local:IndividualCandleControl Margin="505,367,158,15" RenderTransformOrigin="0.5,0.5" FontFamily="Bellerose" Opacity="0.5" Visibility="Collapsed">
+			<local:IndividualCandleControl Margin="505,367,158,15" RenderTransformOrigin="0.5,0.5" Opacity="0.5" Visibility="Collapsed">
 				<local:IndividualCandleControl.RenderTransform>
-					<CompositeTransform ScaleX="-1"/>
+					<CompositeTransform/>
 				</local:IndividualCandleControl.RenderTransform>
 			</local:IndividualCandleControl>
 			<Grid x:Name="InfoGrid" Background="#99000000" RenderTransformOrigin="0.5,0" Opacity="0" IsHitTestVisible="False">
@@ -284,6 +284,7 @@
 					</i:Interaction.Triggers>
 				</Button>
 			</Grid>
+			<TextBlock x:Name="DebugTextBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
 		</Grid>
 		<Button x:Name="InfoButton_Copy" Content="i" HorizontalAlignment="Right" VerticalAlignment="Top" Width="72" Height="72" Opacity="0.01" Style="{StaticResource InfoButtonStyle}" Margin="0,40,20,0" Grid.Row="1" RenderTransformOrigin="0.5,0.5" Background="#05000000" BorderBrush="#DEFFFFFF" Foreground="#DEFFFFFF">
 			<Button.RenderTransform>

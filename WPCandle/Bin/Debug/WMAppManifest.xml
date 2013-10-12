@@ -3,6 +3,8 @@
   <App xmlns="" ProductID="{7f904475-d25c-4e74-a61d-36bc6eec87a2}" Title="Romantic Candle" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Guilbored &amp; Anna" Description="For these precious occasions when you won't bother to check your phone." Publisher="Guilbored" BitsPerPixel="32">
     <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
     <Capabilities>
+      <Capability Name="ID_CAP_MICROPHONE" />
+      <Capability Name="ID_CAP_SENSORS" />
     </Capabilities>
     <Tasks>
       <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
@@ -12,7 +14,8 @@
         <TemplateType5>
           <BackgroundImageURI IsRelative="true" IsResource="false">Background.png</BackgroundImageURI>
           <Count>0</Count>
-          <Title>Romantic Candle</Title>
+          <Title>
+          </Title>
         </TemplateType5>
       </PrimaryToken>
     </Tokens>
