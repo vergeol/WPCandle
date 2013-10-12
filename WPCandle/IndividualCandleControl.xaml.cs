@@ -85,7 +85,12 @@ namespace WPCandle
         public double CandleAngle
         {
             get { return (double)GetValue(CandleAngleProperty); }
-            set { SetValue(CandleAngleProperty, value); }
+            set
+            {
+                if (CandleAngle == value)
+                    return;
+                else
+                    SetValue(CandleAngleProperty, value); }
         }
 
         // Using a DependencyProperty as the backing store for CandleAngle.  This enables animation, styling, binding, etc...

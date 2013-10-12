@@ -63,7 +63,6 @@ C:\Users\g\Documents\GitHub\WPCandle\WPCandle\Bin\Debug\ko\System.Windows.Intera
 C:\Users\g\Documents\GitHub\WPCandle\WPCandle\Bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
 C:\Users\g\Documents\GitHub\WPCandle\WPCandle\Bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
 C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\Bin\Debug\ApplicationIcon.png
-C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\Bin\Debug\Assets\Inspiration\candle_flame_by_sketchesatmidnight-d3433s3.jpg
 C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\Bin\Debug\Background.png
 C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\Bin\Debug\WPCandle.dll
 C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\Bin\Debug\WPCandle.pdb

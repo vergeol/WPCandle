@@ -138,6 +138,10 @@
 					</Storyboard>
 				</VisualState>
 			</VisualStateGroup>
+			<VisualStateGroup x:Name="LandStates">
+				<VisualState x:Name="PortraitState"/>
+				<VisualState x:Name="LandscapeState"/>
+			</VisualStateGroup>
 		</VisualStateManager.VisualStateGroups>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="Auto"/>
@@ -163,6 +167,7 @@
 					<PlaneProjection CenterOfRotationY="1"/>
 				</Rectangle.Projection>
 			</Rectangle>
+			<Grid x:Name="Scene_Bg" Opacity="0" Visibility="Visible">
 			<local:IndividualCandleControl Margin="191,203,436,67" RenderTransformOrigin="0.5,0.5" CurrentColor="Green">
 				<local:IndividualCandleControl.RenderTransform>
 					<CompositeTransform/>
@@ -194,7 +199,9 @@
 					<CompositeTransform/>
 				</local:IndividualCandleControl.RenderTransform>
 			</local:IndividualCandleControl>
+			</Grid>
 			<local:IndividualCandleControl x:Name="MainCandle" Margin="-70,-85,-60,0" CurrentColor="Fuchsia"/>
+			<Grid x:Name="Scene_Fg" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Opacity="0" Visibility="Collapsed" >
 			<local:IndividualCandleControl Margin="477,224,109,14" RenderTransformOrigin="0.5,0.5" CurrentColor="Green">
 				<local:IndividualCandleControl.RenderTransform>
 					<CompositeTransform/>
@@ -210,6 +217,7 @@
 					<CompositeTransform/>
 				</local:IndividualCandleControl.RenderTransform>
 			</local:IndividualCandleControl>
+			</Grid>
 			<Grid x:Name="InfoGrid" Background="#99000000" RenderTransformOrigin="0.5,0" Opacity="0" IsHitTestVisible="False">
 				<Grid.RenderTransform>
 					<CompositeTransform TranslateX="1130"/>
@@ -284,7 +292,7 @@
 					</i:Interaction.Triggers>
 				</Button>
 			</Grid>
-			<TextBlock x:Name="DebugTextBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+			<TextBlock x:Name="DebugTextBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Visibility="Collapsed"/>
 		</Grid>
 		<Button x:Name="InfoButton_Copy" Content="i" HorizontalAlignment="Right" VerticalAlignment="Top" Width="72" Height="72" Opacity="0.01" Style="{StaticResource InfoButtonStyle}" Margin="0,40,20,0" Grid.Row="1" RenderTransformOrigin="0.5,0.5" Background="#05000000" BorderBrush="#DEFFFFFF" Foreground="#DEFFFFFF">
 			<Button.RenderTransform>

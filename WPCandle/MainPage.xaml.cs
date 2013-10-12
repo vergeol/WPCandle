@@ -60,7 +60,7 @@ namespace WPCandle
             try
             {
                 motionEventHandler = new EventHandler<SensorReadingEventArgs<MotionReading>>(motion_CurrentValueChanged);
-                MotionManager.Instance.motion.TimeBetweenUpdates = TimeSpan.FromMilliseconds(50);
+                MotionManager.Instance.motion.TimeBetweenUpdates = TimeSpan.FromMilliseconds(25);
                 MotionManager.Instance.motion.CurrentValueChanged += motionEventHandler;
             }
             catch (Exception e)
@@ -120,7 +120,6 @@ namespace WPCandle
                 double Angle = 0.0;
                 if (lastOrientation == null)
                 {
-                    //assume upright position
                     MainCandle.SetAngle(0.0);
                 }
                 else
@@ -154,12 +153,8 @@ namespace WPCandle
                             break;
                     }
                 }
-
-                DebugTextBlock.Text =  lastOrientation.ToString()+" "+ Angle.ToString();
+                //DebugTextBlock.Text =  lastOrientation.ToString()+ " " + Angle.ToString();
                 MainCandle.SetAngle(Angle);
-
-                //Debug.WriteLine("rx:  " + e.DeviceRotationRate.X.ToString() + " rz: " + e.DeviceRotationRate.Z.ToString());
-
             }
         }
 
