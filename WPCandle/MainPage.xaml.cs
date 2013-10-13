@@ -32,6 +32,7 @@ namespace WPCandle
             Unloaded += new RoutedEventHandler(MainPage_Unloaded);
             OrientationChanged += new EventHandler<OrientationChangedEventArgs>(MainPage_OrientationChanged);
             lastOrientation = this.Orientation;
+            VisualStateManager.GoToState(this, PortraitState.Name, true);
         }
 
 
@@ -60,7 +61,7 @@ namespace WPCandle
             try
             {
                 motionEventHandler = new EventHandler<SensorReadingEventArgs<MotionReading>>(motion_CurrentValueChanged);
-                MotionManager.Instance.motion.TimeBetweenUpdates = TimeSpan.FromMilliseconds(25);
+                MotionManager.Instance.motion.TimeBetweenUpdates = TimeSpan.FromMilliseconds(100);
                 MotionManager.Instance.motion.CurrentValueChanged += motionEventHandler;
             }
             catch (Exception e)
@@ -177,6 +178,7 @@ namespace WPCandle
                         transitionElement.Mode = RotateTransitionMode.In90Counterclockwise;
                     else
                         transitionElement.Mode = RotateTransitionMode.In180Clockwise;
+                    VisualStateManager.GoToState(this, LandscapeState.Name, true);
                     break;
                 case PageOrientation.LandscapeLeft:
                     // Come here from LandscapeRight or PortraitUp?
@@ -184,6 +186,7 @@ namespace WPCandle
                         transitionElement.Mode = RotateTransitionMode.In180Counterclockwise;
                     else
                         transitionElement.Mode = RotateTransitionMode.In90Clockwise;
+                    VisualStateManager.GoToState(this, LandscapeState.Name, true);
                     break;
                 case PageOrientation.Portrait:
                 case PageOrientation.PortraitUp:
@@ -192,6 +195,7 @@ namespace WPCandle
                         transitionElement.Mode = RotateTransitionMode.In90Counterclockwise;
                     else
                         transitionElement.Mode = RotateTransitionMode.In90Clockwise;
+                    VisualStateManager.GoToState(this, PortraitState.Name, true);
                     break;
                 default:
                     break;

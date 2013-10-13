@@ -125,3 +125,4 @@ C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\obj\Debug\WPCandle.g.resources
 C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\obj\Debug\WPCandle.dll
 C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\obj\Debug\WPCandle.pdb
 C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\obj\Debug\XapCacheFile.xml
+C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\Bin\Debug\XamlSpy.WP7.dll
