@@ -1,9 +1,9 @@
-﻿<xapCache source="C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\Bin\Debug\WPCandle.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="2013-10-13 19:18:20">
+﻿<xapCache source="C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\Bin\Debug\WPCandle.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="2013-10-13 20:27:04">
   <file source="C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\Bin\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="2013-10-12 18:18:09" />
   <file source="C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\Background.png" archivePath="Background.png" lastWriteTime="2013-10-06 17:02:43" />
   <file source="C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="2013-10-06 17:02:43" />
-  <file source="C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\obj\Debug\WPCandle.dll" archivePath="WPCandle.dll" lastWriteTime="2013-10-13 19:18:20" />
-  <file source="C:\Users\g\SkyDrive\Projects\Wp7\Guilbored.PhoneLibrary\Guilbored.PhoneLibrary\Bin\Debug\Guilbored.PhoneLibrary.dll" archivePath="Guilbored.PhoneLibrary.dll" lastWriteTime="2013-10-12 19:41:38" />
+  <file source="C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\obj\Debug\WPCandle.dll" archivePath="WPCandle.dll" lastWriteTime="2013-10-13 20:27:04" />
+  <file source="C:\Users\g\SkyDrive\Projects\Wp7\Guilbored.PhoneLibrary\Guilbored.PhoneLibrary\Bin\Debug\Guilbored.PhoneLibrary.dll" archivePath="Guilbored.PhoneLibrary.dll" lastWriteTime="2013-10-13 20:26:46" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\Windows Phone\v7.1\Libraries\Microsoft.Expression.Interactions.dll" archivePath="Microsoft.Expression.Interactions.dll" lastWriteTime="2011-08-17 01:48:22" />
   <file source="C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\packages\WPtoolkit.4.2013.08.16\lib\sl4-windowsphone71\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="2013-10-05 20:43:29" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\Windows Phone\v7.1\Libraries\System.Windows.Interactivity.dll" archivePath="System.Windows.Interactivity.dll" lastWriteTime="2011-08-17 01:48:22" />
@@ -17,7 +17,7 @@
   <file source="C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\Toolkit.Content\ApplicationBar.Check.png" archivePath="Toolkit.Content\ApplicationBar.Check.png" lastWriteTime="2013-10-05 20:43:31" />
   <file source="C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\Toolkit.Content\ApplicationBar.Delete.png" archivePath="Toolkit.Content\ApplicationBar.Delete.png" lastWriteTime="2013-10-05 20:43:31" />
   <file source="C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\Toolkit.Content\ApplicationBar.Select.png" archivePath="Toolkit.Content\ApplicationBar.Select.png" lastWriteTime="2013-10-05 20:43:31" />
-  <file source="C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="2013-10-13 18:47:56" />
+  <file source="C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="2013-10-13 20:26:47" />
   <file source="C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\Bin\Debug\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="2013-10-06 17:02:43" />
   <file source="C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\Bin\Debug\Background.png" archivePath="Background.png" lastWriteTime="2013-10-06 17:02:43" />
 </xapCache>

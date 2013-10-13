@@ -68,7 +68,6 @@ C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\obj\Release\IndividualCandleContr
 C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\obj\Release\MainPage.g.cs
 C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\obj\Release\WPCandle.g.resources
 C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\Bin\Release\ApplicationIcon.png
-C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\Bin\Release\Assets\Inspiration\candle_flame_by_sketchesatmidnight-d3433s3.jpg
 C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\Bin\Release\Background.png
 C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\Bin\Release\WPCandle.dll
 C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\Bin\Release\WPCandle.pdb
@@ -126,3 +125,4 @@ C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\Bin\Release\zh-Hant\System.Window
 C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\obj\Release\WPCandle.dll
 C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\obj\Release\WPCandle.pdb
 C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\obj\Release\XapCacheFile.xml
+C:\Users\g\SkyDrive\Projects\WPCandle\WPCandle\Bin\Release\XamlSpy.WP7.dll

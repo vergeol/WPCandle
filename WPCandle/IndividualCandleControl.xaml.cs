@@ -20,7 +20,9 @@ namespace WPCandle
         Fuchsia,
         Orange,
         Green,
-        Purple
+        Purple,
+        Black,
+        Red
     }
 
     public partial class IndividualCandleControl : UserControl
@@ -73,6 +75,12 @@ namespace WPCandle
                     break;
                 case CandleColor.Purple:
                     VisualStateManager.GoToState(this, PurpleVisualState.Name, true);
+                    break;
+                case CandleColor.Red:
+                    VisualStateManager.GoToState(this, RedVisualState.Name, true);
+                    break;
+                case CandleColor.Black:
+                    VisualStateManager.GoToState(this, BlackVisualState.Name, true);
                     break;
                 default:
                     break;
@@ -246,6 +254,12 @@ namespace WPCandle
                     CurrentColor = CandleColor.Purple;
                     break;
                 case CandleColor.Purple:
+                    CurrentColor = CandleColor.Red;
+                    break;
+                case CandleColor.Red:
+                    CurrentColor = CandleColor.Black;
+                    break;
+                case CandleColor.Black:
                     CurrentColor = CandleColor.White;
                     break;
                 default:

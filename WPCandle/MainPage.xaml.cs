@@ -125,29 +125,18 @@ namespace WPCandle
                 }
                 else
                 {
-                    Angle = -1.0 * (double)MathHelper.ToDegrees(e.Attitude.Roll);
-
                     switch (lastOrientation)
                     {
                         case PageOrientation.Landscape:
-                            Angle = 0.0;
-                            break;
                         case PageOrientation.LandscapeLeft:
-                            Angle = 0.0;
-                            break;
                         case PageOrientation.LandscapeRight:
                             Angle = 0.0;
                             break;
                         case PageOrientation.None:
-                            break;
                         case PageOrientation.Portrait:
-                            
-                            break;
                         case PageOrientation.PortraitDown:
-                            Angle = 0.0;
-                            break;
                         case PageOrientation.PortraitUp:
-
+                            Angle = -1.0 * (double)MathHelper.ToDegrees(e.Attitude.Roll);
                             break;
                         default:
 
