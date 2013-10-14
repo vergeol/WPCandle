@@ -17,11 +17,11 @@
 	<Color x:Key="CandleSideColor">#FFB2A77D</Color>
 	<Color x:Key="CandleHighlightColor">#FFFFF8D6</Color>
 	<RadialGradientBrush x:Key="HaloGradientBrush">
-		<GradientStop Color="#1159291D" Offset="0.853"/>
-		<GradientStop Color="#FFFDECBA"/>
 		<GradientStop Color="#66DFA769" Offset="0.461"/>
 		<GradientStop Color="#628E522E" Offset="0.672"/>
 		<GradientStop Color="#00120D0A" Offset="0.991"/>
+		<GradientStop Color="#1159291D" Offset="0.853"/>
+		<GradientStop Color="#FFFDECBA"/>
 	</RadialGradientBrush>
 	<!-- Resource dictionary entries should be defined here. -->
 </ResourceDictionary>
