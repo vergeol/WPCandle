@@ -8,15 +8,6 @@
     d:DesignHeight="768" d:DesignWidth="480">
 	<UserControl.Resources>
 		<Storyboard x:Name="SlowFlickerStoryboard" AutoReverse="False" SpeedRatio="0.02">
-			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Halo">
-				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.695">
-					<EasingDoubleKeyFrame.EasingFunction>
-						<ElasticEase EasingMode="EaseOut" Oscillations="2" Springiness="8"/>
-					</EasingDoubleKeyFrame.EasingFunction>
-				</EasingDoubleKeyFrame>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0.995"/>
-			</DoubleAnimationUsingKeyFrames>
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="FlameGrid">
 				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.8">
@@ -29,6 +20,11 @@
 						<CubicEase EasingMode="EaseOut"/>
 					</EasingDoubleKeyFrame.EasingFunction>
 				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="HalosGrid">
+				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.6"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1"/>
 			</DoubleAnimationUsingKeyFrames>
 		</Storyboard>
 		<Storyboard x:Name="BurningStoryboard" >
@@ -115,14 +111,14 @@
 					</DiscreteObjectKeyFrame.Value>
 				</DiscreteObjectKeyFrame>
 			</ObjectAnimationUsingKeyFrames>
-			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="grid">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="HalosGrid">
 				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0.7"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="0"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="0"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="1"/>
 			</DoubleAnimationUsingKeyFrames>
-			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="grid">
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="HalosGrid">
 				<DiscreteObjectKeyFrame KeyTime="0:0:2">
 					<DiscreteObjectKeyFrame.Value>
 						<Visibility>Visible</Visibility>
@@ -148,32 +144,6 @@
 			</DoubleAnimationUsingKeyFrames>
 		</Storyboard>
 		<Storyboard x:Name="SideBobStoryboard" SpeedRatio="0.25">
-			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Halo">
-				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="15">
-					<EasingDoubleKeyFrame.EasingFunction>
-						<ElasticEase EasingMode="EaseOut" Springiness="0"/>
-					</EasingDoubleKeyFrame.EasingFunction>
-				</EasingDoubleKeyFrame>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0">
-					<EasingDoubleKeyFrame.EasingFunction>
-						<BackEase EasingMode="EaseOut" Amplitude="0.5"/>
-					</EasingDoubleKeyFrame.EasingFunction>
-				</EasingDoubleKeyFrame>
-			</DoubleAnimationUsingKeyFrames>
-			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="HaloGeneral">
-				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="9">
-					<EasingDoubleKeyFrame.EasingFunction>
-						<ElasticEase EasingMode="EaseOut" Springiness="0"/>
-					</EasingDoubleKeyFrame.EasingFunction>
-				</EasingDoubleKeyFrame>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0">
-					<EasingDoubleKeyFrame.EasingFunction>
-						<BackEase EasingMode="EaseOut" Amplitude="0.5"/>
-					</EasingDoubleKeyFrame.EasingFunction>
-				</EasingDoubleKeyFrame>
-			</DoubleAnimationUsingKeyFrames>
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.SkewX)" Storyboard.TargetName="BitmapFlame">
 				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-5">
@@ -189,32 +159,6 @@
 			</DoubleAnimationUsingKeyFrames>
 		</Storyboard>
 		<Storyboard x:Name="SideBobStoryboard2" SpeedRatio="0.25">
-			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Halo">
-				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-15">
-					<EasingDoubleKeyFrame.EasingFunction>
-						<ElasticEase EasingMode="EaseOut" Springiness="0" Oscillations="1"/>
-					</EasingDoubleKeyFrame.EasingFunction>
-				</EasingDoubleKeyFrame>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0">
-					<EasingDoubleKeyFrame.EasingFunction>
-						<BackEase EasingMode="EaseOut" Amplitude="0.5"/>
-					</EasingDoubleKeyFrame.EasingFunction>
-				</EasingDoubleKeyFrame>
-			</DoubleAnimationUsingKeyFrames>
-			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="HaloGeneral">
-				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-9">
-					<EasingDoubleKeyFrame.EasingFunction>
-						<ElasticEase EasingMode="EaseOut" Springiness="0" Oscillations="1"/>
-					</EasingDoubleKeyFrame.EasingFunction>
-				</EasingDoubleKeyFrame>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0">
-					<EasingDoubleKeyFrame.EasingFunction>
-						<BackEase EasingMode="EaseOut" Amplitude="0.5"/>
-					</EasingDoubleKeyFrame.EasingFunction>
-				</EasingDoubleKeyFrame>
-			</DoubleAnimationUsingKeyFrames>
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.SkewX)" Storyboard.TargetName="BitmapFlame">
 				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="5">
@@ -247,386 +191,14 @@
 				<VisualStateGroup.Transitions>
 					<VisualTransition GeneratedDuration="0"/>
 				</VisualStateGroup.Transitions>
-				<VisualState x:Name="WhiteVisualState">
-					<Storyboard>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="Bottom">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource White_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="Body">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource White_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="CandleWickZone">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource White_CandleWickZoneBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="CandleHaloGlow">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource White_CandleHaloBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-					</Storyboard>
-				</VisualState>
-				<VisualState x:Name="BlueVisualState">
-					<Storyboard>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Blue_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path1">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Blue_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path2">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Blue_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path3">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Blue_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path4">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Blue_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path5">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Blue_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path6">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Blue_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path7">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Blue_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path8">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Blue_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path9">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Blue_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path10">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Blue_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path11">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Blue_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="Bottom">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Blue_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="Body">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Blue_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="CandleHaloGlow">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Blue_CandleHaloBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="CandleWickZone">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Blue_CandleWickZoneBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-					</Storyboard>
-				</VisualState>
-				<VisualState x:Name="FuchsiaVisualState">
-					<Storyboard>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="Bottom">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Fuchsia_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="Body">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Fuchsia_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="CandleHaloGlow">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Fuchsia_CandleHaloBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="CandleWickZone">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Fuchsia_CandleWickZoneBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Fuchsia_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path1">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Fuchsia_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path2">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Fuchsia_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path3">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Fuchsia_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path4">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Fuchsia_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path5">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Fuchsia_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path6">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Fuchsia_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path7">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Fuchsia_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path8">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Fuchsia_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path9">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Fuchsia_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path10">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Fuchsia_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path11">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Fuchsia_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-					</Storyboard>
-				</VisualState>
-				<VisualState x:Name="OrangeVisualState">
-					<Storyboard>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="CandleHaloGlow">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Orange_CandleHaloBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="Bottom">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Orange_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="Body">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Orange_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="CandleWickZone">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Orange_CandleWickZoneBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Orange_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path1">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Orange_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path2">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Orange_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path3">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Orange_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path4">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Orange_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path5">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Orange_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path6">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Orange_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path7">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Orange_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path8">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Orange_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path9">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Orange_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path10">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Orange_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path11">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Orange_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-					</Storyboard>
-				</VisualState>
-				<VisualState x:Name="GreenVisualState">
-					<Storyboard>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="Bottom">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Green_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="Body">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Green_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="CandleHaloGlow">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Green_CandleHaloBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="CandleWickZone">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Green_CandleWickZoneBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Green_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path1">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Green_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path2">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Green_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path3">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Green_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path4">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Green_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path5">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Green_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path6">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Green_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path7">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Green_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path8">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Green_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path9">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Green_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path10">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Green_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path11">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Green_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-					</Storyboard>
-				</VisualState>
-				<VisualState x:Name="PurpleVisualState">
-					<Storyboard>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Purple_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path1">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Purple_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path2">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Purple_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path3">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Purple_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path4">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Purple_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path5">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Purple_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path6">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Purple_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path7">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Purple_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path8">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Purple_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path9">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Purple_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path10">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Purple_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path11">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Purple_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="CandleHaloGlow">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Purple_CandleHaloBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="Body">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Purple_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="Bottom">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Purple_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="CandleWickZone">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Purple_CandleWickZoneBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-					</Storyboard>
-				</VisualState>
-				<VisualState x:Name="BlackVisualState">
-					<Storyboard>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="Body">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Black_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="Bottom">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Black_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="CandleHaloGlow">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Black_CandleHaloBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="CandleWickZone">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Black_CandleWickZoneBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Black_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path1">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Black_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path2">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Black_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path3">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Black_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path4">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Black_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path5">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Black_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path6">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Black_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path7">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Black_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path8">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Black_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path9">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Black_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path10">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Black_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path11">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Black_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-					</Storyboard>
-				</VisualState>
-				<VisualState x:Name="RedVisualState">
-					<Storyboard>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="Bottom">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Red_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="Body">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Red_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="CandleHaloGlow">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Red_CandleHaloBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="CandleWickZone">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Red_CandleWickZoneBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Red_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path1">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Red_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path2">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Red_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path3">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Red_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path4">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Red_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path5">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Red_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path6">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Red_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path7">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Red_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path8">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Red_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path9">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Red_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path10">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Red_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="path11">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource Red_BodyBrush}"/>
-						</ObjectAnimationUsingKeyFrames>
-					</Storyboard>
-				</VisualState>
+				<VisualState x:Name="WhiteVisualState"/>
+				<VisualState x:Name="BlueVisualState"/>
+				<VisualState x:Name="FuchsiaVisualState"/>
+				<VisualState x:Name="OrangeVisualState"/>
+				<VisualState x:Name="GreenVisualState"/>
+				<VisualState x:Name="PurpleVisualState"/>
+				<VisualState x:Name="BlackVisualState"/>
+				<VisualState x:Name="RedVisualState"/>
 			</VisualStateGroup>
 		</VisualStateManager.VisualStateGroups>
 		<VisualStateManager.CustomVisualStateManager>
@@ -640,20 +212,11 @@
 							<CompositeTransform x:Name="FlameRotationCT" Rotation="{Binding CandleAngle, ElementName=userControl}"/>
 						</Grid.RenderTransform>
 						<Grid x:Name="HalosGridRotation" Margin="-364,-325,-361,-308" IsHitTestVisible="False" RenderTransformOrigin="0.505,0.55">
-							<Grid x:Name="grid" RenderTransformOrigin="0.5,0.5">
+							<Grid x:Name="HalosGrid" RenderTransformOrigin="0.5,0.5">
 								<Grid.RenderTransform>
 									<CompositeTransform/>
 								</Grid.RenderTransform>
-								<Ellipse x:Name="HaloGeneral" HorizontalAlignment="Center" Height="813" StrokeThickness="0" VerticalAlignment="Bottom" Width="813" Opacity="0.4" RenderTransformOrigin="0.5,0.5" Fill="{StaticResource HaloGradientBrush}" IsHitTestVisible="False" CacheMode="BitmapCache" >
-									<Ellipse.RenderTransform>
-										<CompositeTransform/>
-									</Ellipse.RenderTransform>
-								</Ellipse>
-								<Ellipse x:Name="Halo" HorizontalAlignment="Center" Height="480" StrokeThickness="0" VerticalAlignment="Bottom" Width="480" Margin="170,0,163,149" RenderTransformOrigin="0.5,0.5" Fill="{StaticResource HaloGradientBrush}" IsHitTestVisible="False" CacheMode="BitmapCache">
-									<Ellipse.RenderTransform>
-										<CompositeTransform/>
-									</Ellipse.RenderTransform>
-								</Ellipse>
+								<Image Source="/Assets/White/Halo.png" Stretch="Fill"/>
 							</Grid>
 						</Grid>
 						<Grid x:Name="FlameGrid" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.95">
@@ -667,42 +230,7 @@
 								<Grid.RenderTransform>
 									<CompositeTransform/>
 								</Grid.RenderTransform>
-								<Ellipse HorizontalAlignment="Center" Height="150.105" StrokeThickness="0" VerticalAlignment="Center" Width="44.279" Fill="White">
-									<Ellipse.OpacityMask>
-										<LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-											<GradientStop Offset="0"/>
-											<GradientStop Color="Transparent" Offset="0.912"/>
-											<GradientStop Color="#4DFFFFFF" Offset="0.226"/>
-											<GradientStop Color="#EBFFFFFF" Offset="0.427"/>
-										</LinearGradientBrush>
-									</Ellipse.OpacityMask>
-								</Ellipse>
-								<Ellipse x:Name="ellipse" HorizontalAlignment="Center" Height="150.105" StrokeThickness="0" VerticalAlignment="Center" Width="44.279">
-									<Ellipse.OpacityMask>
-										<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-											<GradientStop Color="#C1000000" Offset="0.983"/>
-											<GradientStop Color="Transparent" Offset="1"/>
-										</LinearGradientBrush>
-									</Ellipse.OpacityMask>
-									<Ellipse.Fill>
-										<RadialGradientBrush RadiusY="0.713" RadiusX="0.839" Center="0.496,0.283" GradientOrigin="0.496,0.283">
-											<GradientStop Color="#794174F7" Offset="0.873"/>
-											<GradientStop Color="Transparent" Offset="0.804"/>
-											<GradientStop Color="#00122B8B" Offset="0.991"/>
-											<GradientStop Color="#33122B8B" Offset="0.939"/>
-										</RadialGradientBrush>
-									</Ellipse.Fill>
-								</Ellipse>
-								<Ellipse HorizontalAlignment="Center" Height="122" Margin="0,18,0,10" StrokeThickness="0" VerticalAlignment="Center" Width="44.279" Fill="White" Opacity="0.305">
-									<Ellipse.OpacityMask>
-										<LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-											<GradientStop Offset="0"/>
-											<GradientStop Color="Transparent" Offset="1"/>
-											<GradientStop Color="#4DFFFFFF" Offset="0.335"/>
-											<GradientStop Color="White" Offset="0.548"/>
-										</LinearGradientBrush>
-									</Ellipse.OpacityMask>
-								</Ellipse>
+								<Image Source="/Assets/White/Flame.png" Stretch="Fill" Width="45"/>
 							</Grid>
 						</Grid>
 					</Grid>
@@ -718,17 +246,20 @@
 								<CompositeTransform ScaleX="2" ScaleY="2"/>
 							</Ellipse.RenderTransform>
 						</Ellipse>
+						<Image Source="/Assets/White/Shadow.png" Stretch="Fill"/>
 					</Grid>
 					<Grid x:Name="BottomGrid" Margin="0,0,0,-22" Height="45" VerticalAlignment="Bottom">
-						<Ellipse x:Name="Bottom" Height="45" StrokeThickness="0" VerticalAlignment="Bottom" Fill="{StaticResource White_BodyBrush}"/>
+						<Image Source="/Assets/White/BottomZone.png" Stretch="Fill"/>
 					</Grid>
 					<Grid x:Name="BodyGrid">
-						<Rectangle x:Name="Body" StrokeThickness="0" Fill="{StaticResource White_BodyBrush}"/>
+						<Image Source="/Assets/White/Body.png" Stretch="Fill"/>
 					</Grid>
 					<Grid x:Name="CandleHaloGrid" RenderTransformOrigin="0.5,1" Margin="0,0,0,-20">
-						<Rectangle x:Name="CandleHaloGlow" StrokeThickness="0" Margin="0" Fill="{StaticResource White_CandleHaloBrush}" CacheMode="BitmapCache"/>
+						<Image Source="/Assets/White/BodyHalo.png" Stretch="Fill"/>
 					</Grid>
-					<Ellipse x:Name="CandleWickZone" HorizontalAlignment="Center" Height="45" StrokeThickness="0" VerticalAlignment="Top" Width="200" Fill="{StaticResource White_CandleWickZoneBrush}" Margin="0,-23,0,0" />
+					<Grid x:Name="WickZoneGrid" Margin="0,-23,0,0" Height="45" Width="200" VerticalAlignment="Top">
+						<Image Source="/Assets/White/WickZone.png" Stretch="Fill"/>
+					</Grid>
 					<Grid x:Name="MecheGrid" Margin="0,-50,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" IsHitTestVisible="False">
 						<Grid.OpacityMask>
 							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -773,18 +304,7 @@
 									<GradientStop Color="Transparent"/>
 								</LinearGradientBrush>
 							</Grid.OpacityMask>
-							<Path x:Name="path" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,2.001,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round"/>
-							<Path x:Name="path1" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,0,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" Opacity="0.495" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round" Visibility="Collapsed"/>
-							<Path x:Name="path2" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,35.501,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round"/>
-							<Path x:Name="path3" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,33.5,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" Opacity="0.495" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round" Visibility="Collapsed"/>
-							<Path x:Name="path4" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,68.836,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round"/>
-							<Path x:Name="path5" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,66.835,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" Opacity="0.495" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round" Visibility="Collapsed"/>
-							<Path x:Name="path6" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,108.838,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round"/>
-							<Path x:Name="path7" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,106.837,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" Opacity="0.495" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round" Visibility="Collapsed"/>
-							<Path x:Name="path8" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,148.84,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round"/>
-							<Path x:Name="path9" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,146.839,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" Opacity="0.495" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round" Visibility="Collapsed"/>
-							<Path x:Name="path10" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,182.175,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round"/>
-							<Path x:Name="path11" Data="M2.5,2.5 L20.5,22.5 L36.8333,18.8333 L49.1667,35.1667 L77.8333,25.8333 L105.068,40.7485 L131.735,25.4151 L150.833,35.5 L163.833,19.1667 L186.5,24.1667 L202.833,5.83333" HorizontalAlignment="Left" Height="45.667" Margin="0,180.174,-0.333,0" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="205.333" Stroke="{StaticResource White_BodyBrush}" Opacity="0.495" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeStartLineCap="Round" Visibility="Collapsed"/>
+							<Image Source="/Assets/White/Ornaments.png" Stretch="Fill"/>
 						</Grid>
 					</Grid>
 				</Grid></Grid>
