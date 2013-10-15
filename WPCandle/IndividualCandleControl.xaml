@@ -8,7 +8,12 @@
     d:DesignHeight="768" d:DesignWidth="480">
 	<UserControl.Resources>
 		<Storyboard x:Name="SlowFlickerStoryboard" AutoReverse="False" SpeedRatio="0.02">
-			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="FlameGrid">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="HalosGrid">
+				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.6"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="BitmapFlame">
 				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.8">
 					<EasingDoubleKeyFrame.EasingFunction>
@@ -21,23 +26,8 @@
 					</EasingDoubleKeyFrame.EasingFunction>
 				</EasingDoubleKeyFrame>
 			</DoubleAnimationUsingKeyFrames>
-			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="HalosGrid">
-				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.6"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1"/>
-			</DoubleAnimationUsingKeyFrames>
 		</Storyboard>
 		<Storyboard x:Name="BurningStoryboard" >
-			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="Candle">
-				<EasingDoubleKeyFrame KeyTime="0" Value="364"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="70"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="70"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="364">
-					<EasingDoubleKeyFrame.EasingFunction>
-						<BackEase EasingMode="EaseOut" Amplitude="0"/>
-					</EasingDoubleKeyFrame.EasingFunction>
-				</EasingDoubleKeyFrame>
-			</DoubleAnimationUsingKeyFrames>
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="FlameGrid">
 				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0.6">
@@ -55,44 +45,6 @@
 				<EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="0"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="0"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="1"/>
-			</DoubleAnimationUsingKeyFrames>
-			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="BottomShadow">
-				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0.095"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="0"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="0"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="1"/>
-			</DoubleAnimationUsingKeyFrames>
-			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="BottomShadow">
-				<EasingDoubleKeyFrame KeyTime="0" Value="2"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="5"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="2"/>
-			</DoubleAnimationUsingKeyFrames>
-			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="BottomShadow">
-				<EasingDoubleKeyFrame KeyTime="0" Value="2"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="5"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="2"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="2"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="2"/>
-			</DoubleAnimationUsingKeyFrames>
-			<PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.OpacityMask).(RadialGradientBrush.Center)" Storyboard.TargetName="OrnamentsGrid">
-				<EasingPointKeyFrame KeyTime="0" Value="0.5,-1.4"/>
-				<EasingPointKeyFrame KeyTime="0:0:2" Value="0.5,-0.4"/>
-				<EasingPointKeyFrame KeyTime="0:0:2.5" Value="0.5,-0.4"/>
-				<EasingPointKeyFrame KeyTime="0:0:2.6" Value="0.5,-1.4"/>
-			</PointAnimationUsingKeyFrames>
-			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.OpacityMask).(GradientBrush.GradientStops)[0].(GradientStop.Offset)" Storyboard.TargetName="OrnamentsGrid">
-				<EasingDoubleKeyFrame KeyTime="0" Value="0.264"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0.356"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="0.356"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="0.264"/>
-			</DoubleAnimationUsingKeyFrames>
-			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.OpacityMask).(GradientBrush.GradientStops)[1].(GradientStop.Offset)" Storyboard.TargetName="OrnamentsGrid">
-				<EasingDoubleKeyFrame KeyTime="0" Value="0.226"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="0.167"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0.222"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="0.222"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="0.226"/>
 			</DoubleAnimationUsingKeyFrames>
 			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="FlameGrid">
 				<DiscreteObjectKeyFrame KeyTime="0:0:2.2">
@@ -142,6 +94,65 @@
 				<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="0"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="1"/>
 			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="BottomShadowGrid">
+				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0.095"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="BottomShadowGrid">
+				<EasingDoubleKeyFrame KeyTime="0" Value="2"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="5"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="2"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="BottomShadowGrid">
+				<EasingDoubleKeyFrame KeyTime="0" Value="2"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="5"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="2"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="2"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="2"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="BodyGrid">
+				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0.1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="0.1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="WickZoneGrid">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="330"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="330"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="330"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="CandleHaloGrid">
+				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0.1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="0.1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="MecheGrid">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="330"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="330"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="330"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="HalosGridRotation">
+				<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="330"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="330"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="330"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="FlameGrid">
+				<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="330"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="330"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="330"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
 		</Storyboard>
 		<Storyboard x:Name="SideBobStoryboard" SpeedRatio="0.25">
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.SkewX)" Storyboard.TargetName="BitmapFlame">
@@ -173,6 +184,10 @@
 				</EasingDoubleKeyFrame>
 			</DoubleAnimationUsingKeyFrames>
 		</Storyboard>
+		<RadialGradientBrush x:Key="OpacityOrnamentBrush" Center="0.514,0.007" GradientOrigin="0.514,0.007" RadiusY="1.04" RadiusX="1.825">
+			<GradientStop Color="Black" Offset="0.947"/>
+			<GradientStop Color="White" Offset="1"/>
+		</RadialGradientBrush>
 	</UserControl.Resources>
     
 	<UserControl.FontFamily>
@@ -204,111 +219,109 @@
 		<VisualStateManager.CustomVisualStateManager>
 			<ec:ExtendedVisualStateManager/>
 		</VisualStateManager.CustomVisualStateManager>
-		<Viewbox>
-			<Grid x:Name="ContentPanel" Margin="0" Width="480" Height="768">
-				<Grid x:Name="Candle" Margin="0,0,0,45" VerticalAlignment="Bottom" Height="364" Width="200">
-					<Grid x:Name="FlameContainerRotation" Margin="7,-219,0,0" RenderTransformOrigin="0.5,0.95" Height="180" VerticalAlignment="Top" HorizontalAlignment="Center" Width="88">
+		<Viewbox/>
+		<Grid x:Name="ContentPanel" Margin="0" Width="480" Height="768">
+			<Grid x:Name="Candle" Margin="0,0,0,45" VerticalAlignment="Bottom" Height="364" Width="200">
+				<Grid x:Name="FlameContainerRotation" Margin="7,-219,0,0" RenderTransformOrigin="0.5,0.95" Height="180" VerticalAlignment="Top" HorizontalAlignment="Center" Width="88">
+					<Grid.RenderTransform>
+						<CompositeTransform x:Name="FlameRotationCT" Rotation="{Binding CandleAngle, ElementName=userControl}"/>
+					</Grid.RenderTransform>
+					<Grid x:Name="HalosGridRotation" Margin="-364,-325,-361,-308" IsHitTestVisible="False" RenderTransformOrigin="0.505,0.55">
 						<Grid.RenderTransform>
-							<CompositeTransform x:Name="FlameRotationCT" Rotation="{Binding CandleAngle, ElementName=userControl}"/>
+							<CompositeTransform/>
 						</Grid.RenderTransform>
-						<Grid x:Name="HalosGridRotation" Margin="-364,-325,-361,-308" IsHitTestVisible="False" RenderTransformOrigin="0.505,0.55">
-							<Grid x:Name="HalosGrid" RenderTransformOrigin="0.5,0.5">
-								<Grid.RenderTransform>
-									<CompositeTransform/>
-								</Grid.RenderTransform>
-								<Image Source="/Assets/White/Halo.png" Stretch="Fill"/>
-							</Grid>
-						</Grid>
-						<Grid x:Name="FlameGrid" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.95">
+						<Grid x:Name="HalosGrid" RenderTransformOrigin="0.5,0.5">
 							<Grid.RenderTransform>
 								<CompositeTransform/>
 							</Grid.RenderTransform>
-							<Grid.Projection>
-								<PlaneProjection CenterOfRotationX="1" CenterOfRotationY="1"/>
-							</Grid.Projection>
-							<Grid x:Name="BitmapFlame" Margin="0,35,0,-5" CacheMode="BitmapCache" RenderTransformOrigin="0.5,0.95">
-								<Grid.RenderTransform>
-									<CompositeTransform/>
-								</Grid.RenderTransform>
-								<Image Source="/Assets/White/Flame.png" Stretch="Fill" Width="45"/>
-							</Grid>
+							<Image Source="/Assets/White/Halo.png" Stretch="Fill"/>
 						</Grid>
 					</Grid>
-					<Grid x:Name="BottomShadowGrid" Margin="0,0,0,-15" VerticalAlignment="Bottom" Height="32">
-						<Ellipse x:Name="BottomShadow" StrokeThickness="0" RenderTransformOrigin="0.5,0.5" Opacity="0.995" IsHitTestVisible="False">
-							<Ellipse.Fill>
-								<RadialGradientBrush>
-									<GradientStop Color="#FF1D1D1D" Offset="0.491"/>
-									<GradientStop Offset="1"/>
-								</RadialGradientBrush>
-							</Ellipse.Fill>
-							<Ellipse.RenderTransform>
-								<CompositeTransform ScaleX="2" ScaleY="2"/>
-							</Ellipse.RenderTransform>
-						</Ellipse>
-						<Image Source="/Assets/White/Shadow.png" Stretch="Fill"/>
+					<Grid x:Name="FlameGrid" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.95">
+						<Grid.RenderTransform>
+							<CompositeTransform/>
+						</Grid.RenderTransform>
+						<Grid.Projection>
+							<PlaneProjection CenterOfRotationX="1" CenterOfRotationY="1"/>
+						</Grid.Projection>
+						<Grid x:Name="BitmapFlame" Margin="0,55,0,-5" RenderTransformOrigin="0.5,0.95">
+							<Grid.RenderTransform>
+								<CompositeTransform/>
+							</Grid.RenderTransform>
+							<Image Source="/Assets/White/Flame.png" Stretch="Fill" Width="45"/>
+						</Grid>
 					</Grid>
-					<Grid x:Name="BottomGrid" Margin="0,0,0,-22" Height="45" VerticalAlignment="Bottom">
-						<Image Source="/Assets/White/BottomZone.png" Stretch="Fill"/>
-					</Grid>
-					<Grid x:Name="BodyGrid">
-						<Image Source="/Assets/White/Body.png" Stretch="Fill"/>
-					</Grid>
-					<Grid x:Name="CandleHaloGrid" RenderTransformOrigin="0.5,1" Margin="0,0,0,-20">
-						<Image Source="/Assets/White/BodyHalo.png" Stretch="Fill"/>
-					</Grid>
-					<Grid x:Name="WickZoneGrid" Margin="0,-23,0,0" Height="45" Width="200" VerticalAlignment="Top">
-						<Image Source="/Assets/White/WickZone.png" Stretch="Fill"/>
-					</Grid>
-					<Grid x:Name="MecheGrid" Margin="0,-50,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" IsHitTestVisible="False">
-						<Grid.OpacityMask>
-							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-								<GradientStop Color="Black" Offset="0.816"/>
-								<GradientStop Color="Transparent" Offset="1"/>
+				</Grid>
+				<Grid x:Name="BottomShadowGrid" Margin="0,0,0,-15" VerticalAlignment="Bottom" Height="32" RenderTransformOrigin="0.5,0.5">
+					<Grid.RenderTransform>
+						<CompositeTransform/>
+					</Grid.RenderTransform>
+					<Image Source="/Assets/White/Shadow.png" Stretch="Fill"/>
+				</Grid>
+				<Grid x:Name="BottomGrid" Margin="0,0,0,-22" Height="45" VerticalAlignment="Bottom">
+					<Image Source="/Assets/White/BottomZone.png" Stretch="Fill"/>
+				</Grid>
+				<Grid x:Name="BodyGrid" RenderTransformOrigin="0.5,1">
+					<Grid.RenderTransform>
+						<CompositeTransform/>
+					</Grid.RenderTransform>
+					<Image Source="/Assets/White/Body.png" Stretch="Fill"/>
+				</Grid>
+				<Grid x:Name="CandleHaloGrid" RenderTransformOrigin="0.5,1" Margin="0,0,0,-20">
+					<Grid.RenderTransform>
+						<CompositeTransform/>
+					</Grid.RenderTransform>
+					<Image Source="/Assets/White/BodyHalo.png" Stretch="Fill"/>
+				</Grid>
+				<Grid x:Name="WickZoneGrid" Margin="0,-23,0,0" Height="45" Width="200" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+					<Grid.RenderTransform>
+						<CompositeTransform/>
+					</Grid.RenderTransform>
+					<Image Source="/Assets/White/WickZone.png" Stretch="Fill"/>
+				</Grid>
+				<Grid x:Name="MecheGrid" Margin="0,-38,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" IsHitTestVisible="False" Width="37" Height="58" RenderTransformOrigin="0.5,0.5">
+					<Grid.RenderTransform>
+						<CompositeTransform/>
+					</Grid.RenderTransform>
+					<Path Data="M237.375,394.25 C237.375,394.25 225.5,365.625 229.5,341.625 C229.625,341.5 233.375,339.25 233.375,339.25 C233.375,339.25 227.75,358.25 241.375,394.25 C239.625,394.375 237.375,394.25 237.375,394.25 z" HorizontalAlignment="Left" Height="55.056" Margin="0,0,-0.698,-0.056" Stretch="Fill" StrokeThickness="0" UseLayoutRounding="False" VerticalAlignment="Top" Width="12.698" RenderTransformOrigin="0.5,0.5" Visibility="Collapsed">
+						<Path.RenderTransform>
+							<CompositeTransform ScaleX="-1"/>
+						</Path.RenderTransform>
+						<Path.Fill>
+							<LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+								<GradientStop Color="#FF2B2B2B" Offset="0"/>
+								<GradientStop Color="#FF1F1F1F" Offset="1"/>
 							</LinearGradientBrush>
-						</Grid.OpacityMask>
-						<Path Data="M237.375,394.25 C237.375,394.25 225.5,365.625 229.5,341.625 C229.625,341.5 233.375,339.25 233.375,339.25 C233.375,339.25 227.75,358.25 241.375,394.25 C239.625,394.375 237.375,394.25 237.375,394.25 z" HorizontalAlignment="Left" Height="55.056" Margin="0,0,-0.698,-0.056" Stretch="Fill" StrokeThickness="0" UseLayoutRounding="False" VerticalAlignment="Top" Width="12.698" RenderTransformOrigin="0.5,0.5">
-							<Path.RenderTransform>
-								<CompositeTransform ScaleX="-1"/>
-							</Path.RenderTransform>
-							<Path.Fill>
-								<LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-									<GradientStop Color="#FF2B2B2B" Offset="0"/>
-									<GradientStop Color="#FF1F1F1F" Offset="1"/>
-								</LinearGradientBrush>
-							</Path.Fill>
-						</Path>
-						<Ellipse HorizontalAlignment="Left" Height="2.157" Margin="7.667,0.14,-0.244,0" StrokeThickness="0" VerticalAlignment="Top" Width="4.577" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
-							<Ellipse.RenderTransform>
-								<CompositeTransform Rotation="32.298"/>
-							</Ellipse.RenderTransform>
-							<Ellipse.Fill>
-								<RadialGradientBrush>
-									<GradientStop Color="#FFFFFED5" Offset="0"/>
-									<GradientStop Color="#FFF6B27D" Offset="1"/>
-								</RadialGradientBrush>
-							</Ellipse.Fill>
-						</Ellipse>
-					</Grid>
-					<Grid x:Name="OrnamentsGrid" Margin="-3,0" IsHitTestVisible="False">
-						<Grid.OpacityMask>
-							<RadialGradientBrush GradientOrigin="0.5,0" RadiusX="3" RadiusY="2" Center="0.5,-1.4">
-								<GradientStop Color="Black" Offset="0.264"/>
-								<GradientStop Color="Transparent" Offset="0.226"/>
+						</Path.Fill>
+					</Path>
+					<Ellipse HorizontalAlignment="Left" Height="2.157" Margin="7.667,0.14,-0.244,0" StrokeThickness="0" VerticalAlignment="Top" Width="4.577" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Visibility="Collapsed">
+						<Ellipse.RenderTransform>
+							<CompositeTransform Rotation="32.298"/>
+						</Ellipse.RenderTransform>
+						<Ellipse.Fill>
+							<RadialGradientBrush>
+								<GradientStop Color="#FFFFFED5" Offset="0"/>
+								<GradientStop Color="#FFF6B27D" Offset="1"/>
 							</RadialGradientBrush>
-						</Grid.OpacityMask>
-						<Grid x:Name="Ornaments" VerticalAlignment="Bottom" Height="228" Margin="0,0,0,32" CacheMode="BitmapCache" >
-							<Grid.OpacityMask>
-								<LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-									<GradientStop Color="Black" Offset="0.113"/>
-									<GradientStop Color="Transparent"/>
-								</LinearGradientBrush>
-							</Grid.OpacityMask>
-							<Image Source="/Assets/White/Ornaments.png" Stretch="Fill"/>
-						</Grid>
+						</Ellipse.Fill>
+					</Ellipse>
+					<Image Source="/Assets/White/Wick.png" HorizontalAlignment="Center" Margin="0,0,0,17"/>
+				</Grid>
+				<Grid x:Name="OrnamentsGrid" Margin="-3,0" IsHitTestVisible="False">
+					<Grid.OpacityMask>
+						<RadialGradientBrush Center="105.884,2.548" GradientOrigin="105.884,2.548" RadiusY="378.56" RadiusX="375.95" MappingMode="Absolute">
+							<RadialGradientBrush.RelativeTransform>
+								<CompositeTransform CenterY="0.5" CenterX="0.5"/>
+							</RadialGradientBrush.RelativeTransform>
+							<GradientStop Color="Black" Offset="0.947"/>
+							<GradientStop Color="Transparent"/>
+						</RadialGradientBrush>
+					</Grid.OpacityMask>
+					<Grid x:Name="Ornaments" VerticalAlignment="Bottom" Height="228" Margin="0,0,0,32"  >
+						<Image Source="/Assets/White/Ornaments.png" Stretch="Fill"/>
 					</Grid>
-				</Grid></Grid>
-		</Viewbox>
+				</Grid>
+			</Grid></Grid>
 
 	</Grid>
 </UserControl>

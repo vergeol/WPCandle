@@ -61,7 +61,7 @@ namespace WPCandle
             try
             {
                 motionEventHandler = new EventHandler<SensorReadingEventArgs<MotionReading>>(motion_CurrentValueChanged);
-                MotionManager.Instance.motion.TimeBetweenUpdates = TimeSpan.FromMilliseconds(100);
+                //MotionManager.Instance.motion.TimeBetweenUpdates = TimeSpan.FromMilliseconds(100);
                 MotionManager.Instance.motion.CurrentValueChanged += motionEventHandler;
             }
             catch (Exception e)
@@ -155,14 +155,14 @@ namespace WPCandle
         {
             PageOrientation newOrientation = e.Orientation;
 
-            // Orientations are (clockwise) 'PortraitUp', 'LandscapeRight', 'LandscapeLeft'
+            //// Orientations are (clockwise) 'PortraitUp', 'LandscapeRight', 'LandscapeLeft'
             RotateTransition transitionElement = new RotateTransition();
 
             switch (newOrientation)
             {
                 case PageOrientation.Landscape:
                 case PageOrientation.LandscapeRight:
-                    // Come here from PortraitUp (i.e. clockwise) or LandscapeLeft?
+                    //// Come here from PortraitUp (i.e. clockwise) or LandscapeLeft?
                     if (lastOrientation == PageOrientation.PortraitUp)
                         transitionElement.Mode = RotateTransitionMode.In90Counterclockwise;
                     else

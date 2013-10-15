@@ -8,7 +8,7 @@
     xmlns:local="clr-namespace:WPCandle" xmlns:System="clr-namespace:System;assembly=mscorlib" xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" xmlns:ec="clr-namespace:Microsoft.Expression.Interactivity.Core;assembly=Microsoft.Expression.Interactions" x:Name="phoneApplicationPage" 
     x:Class="WPCandle.MainPage"
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
-    SupportedOrientations="PortraitOrLandscape" Orientation="Landscape" 
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait" 
 	shell:SystemTray.IsVisible="True"
 	shell:SystemTray.Opacity="0"
 	shell:SystemTray.BackgroundColor="Transparent" FontFamily="{StaticResource PhoneFontFamilyNormal}" FontSize="{StaticResource PhoneFontSizeNormal}" Background="Black">
@@ -146,19 +146,13 @@
 						</VisualTransition.GeneratedEasingFunction>
 					</VisualTransition>
 				</VisualStateGroup.Transitions>
-				<VisualState x:Name="LandscapeState">
-					<Storyboard>
-						<DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="grid" d:IsOptimized="True"/>
-						<DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="grid" d:IsOptimized="True"/>
-					</Storyboard>
-				</VisualState>
+				<VisualState x:Name="LandscapeState"/>
 				<VisualState x:Name="PortraitState">
 					<Storyboard>
-						<DoubleAnimation Duration="0" To="2" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="grid" d:IsOptimized="True"/>
-						<DoubleAnimation Duration="0" To="2" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="grid" d:IsOptimized="True"/>
 						<DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Scene_Bg" d:IsOptimized="True"/>
 						<DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Scene_Fg" d:IsOptimized="True"/>
-						<DoubleAnimation Duration="0" To="35" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="grid" d:IsOptimized="True"/>
+						<DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="MainCandle" d:IsOptimized="True"/>
+						<DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="MainCandle" d:IsOptimized="True"/>
 					</Storyboard>
 				</VisualState>
 			</VisualStateGroup>
@@ -187,57 +181,57 @@
 					<PlaneProjection CenterOfRotationY="1"/>
 				</Rectangle.Projection>
 			</Rectangle>
-			<Viewbox x:Name="viewbox" Margin="-70,0,-60,0" RenderTransformOrigin="0.5,0.5">
-				<Viewbox.RenderTransform>
-					<CompositeTransform/>
-				</Viewbox.RenderTransform>
-				<Grid x:Name="grid" Height="515" Width="900" RenderTransformOrigin="0.5,0.5">
-					<Grid.RenderTransform>
-						<CompositeTransform ScaleX="1.85" ScaleY="1.85"/>
-					</Grid.RenderTransform>
-					<Grid x:Name="Scene_Bg" Margin="70,0,60,0" Height="425" VerticalAlignment="Bottom">
-						<local:IndividualCandleControl Margin="191,0,0,67" RenderTransformOrigin="0.5,0.5" CurrentColor="Green" Width="101" Height="210" HorizontalAlignment="Left" VerticalAlignment="Bottom">
-							<local:IndividualCandleControl.RenderTransform>
-								<CompositeTransform/>
-							</local:IndividualCandleControl.RenderTransform>
-						</local:IndividualCandleControl>
-						<local:IndividualCandleControl Margin="0,0,208,80" RenderTransformOrigin="0.5,0.5" CurrentColor="Orange" Width="109" Height="199" HorizontalAlignment="Right" VerticalAlignment="Bottom">
-							<local:IndividualCandleControl.RenderTransform>
-								<CompositeTransform/>
-							</local:IndividualCandleControl.RenderTransform>
-						</local:IndividualCandleControl>
-						<local:IndividualCandleControl Margin="30,-11,0,48" CurrentColor="Orange" Width="240" HorizontalAlignment="Left"/>
-						<local:IndividualCandleControl Margin="0,-9,-46,46" RenderTransformOrigin="0.5,0.5" CurrentColor="Fuchsia" Width="299" HorizontalAlignment="Right">
-							<local:IndividualCandleControl.RenderTransform>
-								<CompositeTransform/>
-							</local:IndividualCandleControl.RenderTransform>
-						</local:IndividualCandleControl>
-						<local:IndividualCandleControl Margin="-39,0,0,10" RenderTransformOrigin="0.5,0.5" CurrentColor="Fuchsia" Width="211" Height="324" HorizontalAlignment="Left" VerticalAlignment="Bottom">
-							<local:IndividualCandleControl.RenderTransform>
-								<CompositeTransform/>
-							</local:IndividualCandleControl.RenderTransform>
-						</local:IndividualCandleControl>
-					</Grid>
-					<local:IndividualCandleControl x:Name="MainCandle" CurrentColor="Fuchsia"/>
-					<Grid x:Name="Scene_Fg" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Margin="70,85,60,0" >
-						<local:IndividualCandleControl Margin="0,0,117,10" RenderTransformOrigin="0.5,0.5" CurrentColor="Green" Width="142" HorizontalAlignment="Right" Height="202">
-							<local:IndividualCandleControl.RenderTransform>
-								<CompositeTransform/>
-							</local:IndividualCandleControl.RenderTransform>
-						</local:IndividualCandleControl>
-						<local:IndividualCandleControl Margin="174,0,0,13" RenderTransformOrigin="0.5,0.5" CurrentColor="Blue" Width="80" Height="131" VerticalAlignment="Bottom" HorizontalAlignment="Left">
-							<local:IndividualCandleControl.RenderTransform>
-								<CompositeTransform/>
-							</local:IndividualCandleControl.RenderTransform>
-						</local:IndividualCandleControl>
-						<local:IndividualCandleControl Margin="0,0,44,14" RenderTransformOrigin="0.5,0.5" Width="65" Height="98" VerticalAlignment="Bottom" HorizontalAlignment="Right" Visibility="Collapsed">
-							<local:IndividualCandleControl.RenderTransform>
-								<CompositeTransform/>
-							</local:IndividualCandleControl.RenderTransform>
-						</local:IndividualCandleControl>
-					</Grid>
+			<Grid x:Name="Scenery" RenderTransformOrigin="0.5,0.5" Margin="0" Width="800" Height="800" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+				<Grid x:Name="Scene_Bg" VerticalAlignment="Bottom">
+					<local:IndividualCandleControl RenderTransformOrigin="0.5,1" CurrentColor="Green" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+						<local:IndividualCandleControl.RenderTransform>
+							<CompositeTransform ScaleX="-0.2" ScaleY="0.2" TranslateY="-61" TranslateX="-247"/>
+						</local:IndividualCandleControl.RenderTransform>
+					</local:IndividualCandleControl>
+					<local:IndividualCandleControl RenderTransformOrigin="0.5,1" CurrentColor="Orange" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+						<local:IndividualCandleControl.RenderTransform>
+							<CompositeTransform ScaleX="0.4" ScaleY="0.4" TranslateY="-21" TranslateX="-310"/>
+						</local:IndividualCandleControl.RenderTransform>
+					</local:IndividualCandleControl>
+					<local:IndividualCandleControl CurrentColor="Orange" HorizontalAlignment="Center" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,1">
+						<local:IndividualCandleControl.RenderTransform>
+							<CompositeTransform ScaleX="0.3" ScaleY="0.3" TranslateY="-21" TranslateX="-187"/>
+						</local:IndividualCandleControl.RenderTransform>
+					</local:IndividualCandleControl>
+					<local:IndividualCandleControl RenderTransformOrigin="0.5,1" CurrentColor="Fuchsia" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+						<local:IndividualCandleControl.RenderTransform>
+							<CompositeTransform ScaleX="0.4" ScaleY="0.4" TranslateY="-36" TranslateX="134"/>
+						</local:IndividualCandleControl.RenderTransform>
+					</local:IndividualCandleControl>
+					<local:IndividualCandleControl RenderTransformOrigin="0.5,1" CurrentColor="Fuchsia" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+						<local:IndividualCandleControl.RenderTransform>
+							<CompositeTransform ScaleX="0.3" ScaleY="0.3" TranslateY="-21" TranslateX="278"/>
+						</local:IndividualCandleControl.RenderTransform>
+					</local:IndividualCandleControl>
 				</Grid>
-			</Viewbox>
+				<local:IndividualCandleControl x:Name="MainCandle" CurrentColor="Fuchsia" RenderTransformOrigin="0.5,1">
+					<local:IndividualCandleControl.RenderTransform>
+						<CompositeTransform ScaleX="0.6" ScaleY="0.6"/>
+					</local:IndividualCandleControl.RenderTransform>
+				</local:IndividualCandleControl>
+				<Grid x:Name="Scene_Fg" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" >
+					<local:IndividualCandleControl RenderTransformOrigin="0.5,1" CurrentColor="Green" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+						<local:IndividualCandleControl.RenderTransform>
+							<CompositeTransform ScaleX="0.2" ScaleY="0.2" TranslateX="206"/>
+						</local:IndividualCandleControl.RenderTransform>
+					</local:IndividualCandleControl>
+					<local:IndividualCandleControl RenderTransformOrigin="0.5,1" CurrentColor="Blue" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+						<local:IndividualCandleControl.RenderTransform>
+							<CompositeTransform ScaleX="0.2" ScaleY="0.2" TranslateX="-110"/>
+						</local:IndividualCandleControl.RenderTransform>
+					</local:IndividualCandleControl>
+					<local:IndividualCandleControl RenderTransformOrigin="0.5,1" VerticalAlignment="Bottom" Visibility="Collapsed" HorizontalAlignment="Center">
+						<local:IndividualCandleControl.RenderTransform>
+							<CompositeTransform ScaleX="0.2" ScaleY="0.2"/>
+						</local:IndividualCandleControl.RenderTransform>
+					</local:IndividualCandleControl>
+				</Grid>
+			</Grid>
 			<Grid x:Name="InfoGrid" Background="#99000000" RenderTransformOrigin="0.5,0" Opacity="0" IsHitTestVisible="False">
 				<Grid.RenderTransform>
 					<CompositeTransform TranslateX="1130"/>
